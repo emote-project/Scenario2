@@ -1,0 +1,45 @@
+﻿<Window x:Class="InteractionsCanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:zoom="clr-namespace:WPFExtensions.Controls;assembly=WPFExtensions"
+        xmlns:tree="clr-namespace:GraphSharp.Algorithms.Layout.Simple.Tree;assembly=GraphSharp"
+        xmlns:efSug="clr-namespace:GraphSharp.Algorithms.Layout.Simple.Hierarchical;assembly=GraphSharp"
+        xmlns:IC="clr-namespace:InteractionsCanvas.ViewModels"
+        Title="MainWindow" Height="768" Width="1024">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/PocGraphDataTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Load" Click="Load_MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid Height="40" VerticalAlignment="Top">
+            <Button Content="Reset" Margin="0,10,5,9" Click="ResetFilter_Button_Click" HorizontalAlignment="Right" Width="45"/>
+            <Label Content="Filter" Height="30" Width="40" Margin="628,6,348,4" />
+            <ComboBox x:Name="cmbDetectors" HorizontalAlignment="Left" Margin="668,10,0,0" VerticalAlignment="Top" Width="293" ItemsSource="{Binding}" SelectionChanged="cmbDetectors_Selected"/>
+        </Grid>
+        <Grid Margin="0,45,0,0">
+            <zoom:ZoomControl>
+                <IC:MyGraphLayout
+                    x:Name="layout"
+                    LayoutAlgorithmType="EfficientSugiyama"
+                    OverlapRemovalAlgorithmType="FSA"
+                    Graph="{Binding Graph}"
+                    AsyncCompute="true"
+                    ShowAllStates="True"
+                    HighlightAlgorithmType="Simple">
+                    <IC:MyGraphLayout.LayoutParameters>
+                        <efSug:EfficientSugiyamaLayoutParameters EdgeRouting="Orthogonal" LayerDistance="80" VertexDistance="30" PositionMode="-1"  />
+                    </IC:MyGraphLayout.LayoutParameters>
+                </IC:MyGraphLayout>
+            </zoom:ZoomControl>
+        </Grid>
+    </Grid>
+</Window>

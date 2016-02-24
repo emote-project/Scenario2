@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<structureupgrades>
+	<upgrade name="NotUsed">
+	</upgrade>
+	<upgrade name="Solar_Roofs">
+		<supportedstructure>Suburban</supportedstructure>
+		<supportedstructure>Residential_Tower</supportedstructure>
+	</upgrade>
+	<upgrade name="Improved_Insulation">
+		<supportedstructure>Suburban</supportedstructure>
+		<supportedstructure>Urban</supportedstructure>
+		<supportedstructure>Light_Industry</supportedstructure>
+		<supportedstructure>Residential_Tower</supportedstructure>
+	</upgrade>
+	<upgrade name="Rainwater_Storage">
+		<supportedstructure>Suburban</supportedstructure>
+	</upgrade>
+	<upgrade name="Bus_Stop">
+		<supportedstructure>Suburban</supportedstructure>
+		<supportedstructure>Market</supportedstructure>
+		<supportedstructure>Public_Services</supportedstructure>
+		<supportedstructure>Stadium</supportedstructure>
+	</upgrade>
+	<upgrade name="Rooftop_Windmills">
+		<supportedstructure>Urban</supportedstructure>
+		<supportedstructure>Commercial</supportedstructure>
+		<supportedstructure>Public_Services</supportedstructure>
+	</upgrade>
+	<upgrade name="Thermal_Storage">
+		<supportedstructure>Stadium</supportedstructure>
+		<supportedstructure>Light_Industry</supportedstructure>
+	</upgrade>
+	<upgrade name="Birdhouse">
+		<supportedstructure>Park</supportedstructure>
+	</upgrade>
+	<upgrade name="Eco_Roofs">
+		<supportedstructure>Urban</supportedstructure>
+		<supportedstructure>Light_Industry</supportedstructure>
+		<supportedstructure>Public_Services</supportedstructure>
+	</upgrade>
+	<upgrade name="Subway_Station">
+		<supportedstructure>Urban</supportedstructure>
+		<supportedstructure>Commercial</supportedstructure>
+		<supportedstructure>Residential_Tower</supportedstructure>
+		<supportedstructure>Public_Services</supportedstructure>
+		<supportedstructure>Stadium</supportedstructure>
+	</upgrade>
+	<upgrade name="Energy_Efficient_Lightbulbs">
+		<supportedstructure>Suburban</supportedstructure>
+		<supportedstructure>Urban</supportedstructure>
+	</upgrade>
+	<upgrade name="Recycling_Facilities">
+		<supportedstructure>Light_Industry</supportedstructure>
+		<supportedstructure>Heavy_Industry</supportedstructure>
+		<supportedstructure>Commercial</supportedstructure>
+		<supportedstructure>Residential_Tower</supportedstructure>
+	</upgrade>
+	<upgrade name="CO2_Reduction_Plan">
+		<supportedstructure>Light_Industry</supportedstructure>
+		<supportedstructure>Heavy_Industry</supportedstructure>
+		<supportedstructure>Commercial</supportedstructure>
+	</upgrade>
+	<upgrade name="Cradle_2_Cradle">
+		<supportedstructure>Commercial</supportedstructure>
+		<supportedstructure>Residential_Tower</supportedstructure>
+		<supportedstructure>Heavy_Industry</supportedstructure>
+	</upgrade>
+	<upgrade name="Bio_Food">
+		<supportedstructure>Market</supportedstructure>
+	</upgrade>
+	<upgrade name="Veggie_Food">
+		<supportedstructure>Market</supportedstructure>
+	</upgrade>
+	<upgrade name="Watch_Tower">
+		<supportedstructure>Forest</supportedstructure>
+		<supportedstructure>Wildlife_Reserve</supportedstructure>
+	</upgrade>
+	<upgrade name="Forest_Health_Plan">
+		<supportedstructure>Forest</supportedstructure>
+		<supportedstructure>Wildlife_Reserve</supportedstructure>
+	</upgrade>
+	<upgrade name="Wildlife_Preservation">
+		<supportedstructure>Wildlife_Reserve</supportedstructure>
+	</upgrade>
+	<upgrade name="Exhaust_Scrubbers">
+		<supportedstructure>Heavy_Industry</supportedstructure>
+		<supportedstructure>Coal_Plant</supportedstructure>
+		<supportedstructure>Coal_Plant_Small</supportedstructure>
+	</upgrade>
+	<upgrade name="Coal_Washing">
+		<supportedstructure>Coal_Plant</supportedstructure>
+		<supportedstructure>Coal_Plant_Small</supportedstructure>
+	</upgrade>
+	<upgrade name="CO2_Storage">
+		<supportedstructure>Heavy_Industry</supportedstructure>
+		<supportedstructure>Coal_Plant</supportedstructure>
+	</upgrade>
+	<upgrade name="Bigger_Rotor_Blades">
+		<supportedstructure>Windmills</supportedstructure>
+	</upgrade>
+	<upgrade name="Next_Gen_Solar_Cells">
+		<supportedstructure>Solar_Plant</supportedstructure>
+	</upgrade>
+	<upgrade name="Moving_Solar_Pads">
+		<supportedstructure>Solar_Plant</supportedstructure>
+	</upgrade>
+	<upgrade name="Improved_Uranium_Storage">
+		<supportedstructure>Nuclear_Plant</supportedstructure>
+	</upgrade>
+	<upgrade name="Uranium_Recycling">
+		<supportedstructure>Nuclear_Plant</supportedstructure>
+	</upgrade>
+</structureupgrades>

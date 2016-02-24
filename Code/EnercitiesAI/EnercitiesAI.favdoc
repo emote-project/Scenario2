@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Favorites xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <folders />
+  <favorites>
+    <Favorite>
+      <name>StrategyAdjusting.cs</name>
+      <path>enercitiesai\ai\planning\strategyadjusting.cs</path>
+      <absolutePath>c:\users\pedro\desktop\emote\emote-modules-wip\enercitiesai\enercitiesai\ai\planning\strategyadjusting.cs</absolutePath>
+    </Favorite>
+    <Favorite>
+      <name>ActionPlanner.cs</name>
+      <path>enercitiesai\ai\planning\actionplanner.cs</path>
+      <absolutePath>c:\users\pedro\desktop\emote\emote-modules-wip\enercitiesai\enercitiesai\ai\planning\actionplanner.cs</absolutePath>
+    </Favorite>
+    <Favorite>
+      <name>WorldPanel.cs</name>
+      <path>EnercitiesAI\Forms\WorldPanel.cs</path>
+      <absolutePath>C:\Users\PEDRO\Desktop\EMOTE\EMOTE-Modules-WIP\EnercitiesAI\EnercitiesAI\Forms\WorldPanel.cs</absolutePath>
+    </Favorite>
+    <Favorite>
+      <name>StrategyControl.cs</name>
+      <path>EnercitiesAI\Forms\StrategyControl.cs</path>
+      <absolutePath>C:\Users\PEDRO\Desktop\EMOTE\EMOTE-Modules-WIP\EnercitiesAI\EnercitiesAI\Forms\StrategyControl.cs</absolutePath>
+    </Favorite>
+    <Favorite>
+      <name>StrategyAdjustmentControl.cs</name>
+      <path>StrategyEditor\StrategyAdjustmentControl.cs</path>
+      <absolutePath>C:\Users\PEDRO\Desktop\EMOTE\EMOTE-Modules-WIP\EnercitiesAI\StrategyEditor\StrategyAdjustmentControl.cs</absolutePath>
+    </Favorite>
+    <Favorite>
+      <name>may-strategy.json</name>
+      <path>EnercitiesAI\Strategies\may-strategy.json</path>
+      <absolutePath>C:\Users\PEDRO\Desktop\EMOTE\EMOTE-Modules-WIP\EnercitiesAI\EnercitiesAI\Strategies\may-strategy.json</absolutePath>
+    </Favorite>
+    <Favorite>
+      <name>env-strategy.json</name>
+      <path>EnercitiesAI\Strategies\env-strategy.json</path>
+      <absolutePath>C:\Users\PEDRO\Desktop\EMOTE\EMOTE-Modules-WIP\EnercitiesAI\EnercitiesAI\Strategies\env-strategy.json</absolutePath>
+    </Favorite>
+    <Favorite>
+      <name>eco-strategy.json</name>
+      <path>EnercitiesAI\Strategies\eco-strategy.json</path>
+      <absolutePath>C:\Users\PEDRO\Desktop\EMOTE\EMOTE-Modules-WIP\EnercitiesAI\EnercitiesAI\Strategies\eco-strategy.json</absolutePath>
+    </Favorite>
+  </favorites>
+</Favorites>

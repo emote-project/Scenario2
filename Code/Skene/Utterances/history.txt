@@ -1,0 +1,7 @@
+Undefined,Utterances_S1_NEW_v7.xls,<GAZE(student)> <Face(neutral)>  Follow the road 160 meters South until you reach a bus station.,taskstep,malmoeasya1s0,Undefined,Undefined
+Undefined,Utterances_S1_NEW_v7.xls,<GAZE(student)> <Face(neutral)> Remember that we were looking for the /symbol/ /distance/ /direction/ of the /symbol2/.,requestion,distancedirectionsymbol,Undefined,Undefined
+Undefined,Utterances_S1_NEW_Tom.xls,Which tool could tell you the /skill/? ,pump,tool,Undefined,Undefined
+168,NewUtterancesFile.xlsx,<GAZE(student)> <Face(neutral)>  Hi /student/! It is very nice to meet you! <ANIMATE(greeting)> My name is Nao. \pau=500\ Today we are going to do a geography activity on this touchtable.,greetuser,-,Undefined,Undefined
+Undefined,Utterances_S1_NEW_v7.xls,<GAZE(student)> <Face(neutral)>  So, let us start. Now I will read directions to you that you should follow in order to locate the \rmw=1\ kloos \rmw=0\. <GLANCEANDPOINT(scale)>These directions will also be located on the bottom left of the screen, so you,askready,-,Undefined,Undefined
+Undefined,Utterances_S1_NEW_v7.xls,<GLANCE(throughMap)> Today we are going to do a treasure hunt. <HEADNOD(1)>,taskintro,-,Undefined,Undefined
+Undefined,Utterances_S1_NEW_v7.xls,,taskstep,malmomediuma1s0,Undefined,Undefined

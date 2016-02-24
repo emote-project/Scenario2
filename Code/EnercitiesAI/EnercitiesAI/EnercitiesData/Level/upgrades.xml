@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<upgrades>
+	<!--
+		<researchcost>0</researchcost>
+		what you have to pay to enable this improvement
+		
+		<researchtime>0,1</researchtime>
+		time, in years, it takes before improvement is enabled
+		
+		<homes>0</homes>
+		added homes to the structure this improvement is applied to
+		
+		<annualcost>0</annualcost>
+		what this building cost per year, if you use -3 i.e. you produce 3 money a year!
+		
+		<annualenergy>0</annualenergy>
+		how much energy this building produces a year, i.e. -3: it uses 3 energy!
+		
+		<annualoil>0</annualoil>
+		how much oil this building produces a year, i.e. -5: it uses 5 oil each year!
+		
+		//These are normal score
+		positive score is positive, negative is negative
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	-->
+	<upgrade name="NotUsed">
+		<researchcost>0</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Solar_Roofs">
+		<researchcost>5</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>1</annualenergy>
+		<annualoil>1</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Improved_Insulation">
+		<researchcost>4</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>1</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Rainwater_Storage">
+		<researchcost>2</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0,5</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Bus_Stop">
+		<researchcost>2</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0,2</annualoil>
+		<environmentscore>0,5</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Rooftop_Windmills">
+		<researchcost>5</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>2</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Thermal_Storage">
+		<researchcost>6</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0,5</annualoil>
+		<environmentscore>0,5</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Birdhouse">
+		<researchcost>0,5</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0,2</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Eco_Roofs">
+		<researchcost>3</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0,5</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Subway_Station">
+		<researchcost>7</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>-1</annualenergy>
+		<annualoil>2</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Energy_Efficient_Lightbulbs">
+		<researchcost>2</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0,5</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Recycling_Facilities">
+		<researchcost>10</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>-1</annualenergy>
+		<annualoil>2</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="CO2_Reduction_Plan">
+		<researchcost>5</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0,5</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>-1</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Cradle_2_Cradle">
+		<researchcost>15</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>2</annualoil>
+		<environmentscore>2</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>1</wellbeingscore>
+	</upgrade>
+	<upgrade name="Bio_Food">
+		<researchcost>1</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0,2</annualoil>
+		<environmentscore>0,5</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0,5</wellbeingscore>
+	</upgrade>
+	<upgrade name="Veggie_Food">
+		<researchcost>2</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>1</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0,5</wellbeingscore>
+	</upgrade>
+	<upgrade name="Watch_Tower">
+		<researchcost>3</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0,5</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Forest_Health_Plan">
+		<researchcost>5</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Wildlife_Preservation">
+		<researchcost>7</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0,5</wellbeingscore>
+	</upgrade>
+	<upgrade name="Exhaust_Scrubbers">
+		<researchcost>3</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>-1</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Coal_Washing">
+		<researchcost>5</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0,5</annualoil>
+		<environmentscore>0,5</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="CO2_Storage">
+		<researchcost>7</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>-1</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>2</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Bigger_Rotor_Blades">
+		<researchcost>2</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>1</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Next_Gen_Solar_Cells">
+		<researchcost>6</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>3</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Moving_Solar_Pads">
+		<researchcost>2</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>1</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+	<upgrade name="Improved_Uranium_Storage">
+		<researchcost>8</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0</annualoil>
+		<environmentscore>1</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>1</wellbeingscore>
+	</upgrade>
+	<upgrade name="Uranium_Recycling">
+		<researchcost>15</researchcost>
+		<researchtime>0,1</researchtime>
+		<homes>0</homes>
+		<annualcost>0</annualcost>
+		<annualenergy>0</annualenergy>
+		<annualoil>0,5</annualoil>
+		<environmentscore>2</environmentscore>
+		<economyscore>1</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</upgrade>
+</upgrades>

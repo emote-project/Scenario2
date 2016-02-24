@@ -1,0 +1,16 @@
+doNothingClass
+IFMLSpeech.PerformUtterance:-
+IFMLSpeech.PerformUtterance:robot.backup
+IFMLSpeech.PerformUtterance:robot.jokes
+IFMLSpeech.PerformUtterance:technical.-
+IFMLSpeech.PerformUtterance:robot.regreat
+IFMLSpeech.PerformUtterance:robot.turntaking
+IFMLSpeech.PerformUtterance:status.levelup
+IFMLSpeech.PerformUtterance:tutorial.goodbye2
+IFMLSpeech.PerformUtterance:tutorial.goodbye1
+IFMLSpeech.PerformUtterance:tutorial.welcome
+IFMLSpeech.PerformUtterance:tutorial.1
+IFMLSpeech.PerformUtterance:tutorial.endgame
+IFMLSpeech.PerformUtterance:PerformUpgrade:Self
+IFMLSpeech.PerformUtterance:ConfirmConstruction:Self
+IFMLSpeech.PerformUtterance:ImplementPolicy:Self

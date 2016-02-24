@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="mp2tA">
+	<gazeShift id="g1" start="1" end="mp2tA3:end" offsetdirection="DOWNLEFT"></gazeShift>
+	<speech id="mp2tA1" start="g1:start"><text>Eeny.</text></speech>
+	<speech id="mp2tA3" start="mp2tB.mp2tB2:end"><text>Miny.</text></speech>
+	
+	<gazeShift id="g2" start="mp2tB.mp2tB4:end" end="mp2tA7:end" offsetdirection="LEFT"></gazeShift>
+	<speech id="mp2tA5" start="g2:start"><text>Catch a</text></speech>
+	<speech id="mp2tA7" start="mp2tB.mp2tB6:end"><text>By the.</text></speech>
+	
+	<speech id="mp2tA9" start="mp2tB.mp2tB8:end"><text>If he.</text></speech>
+	
+	<gazeShift id="g3" start="mp2tB.mp2tB10:end" end="mp2tB.mp2tB12:end" offsetdirection="DOWNLEFT"></gazeShift>
+	<speech id="mp2tA11" start="g3:start"><text>Let him.</text></speech>
+	
+	
+	<speech id="mp2tA13" start="mp2tB.mp2tB12:end"><text>Eeny.</text></speech>
+	
+	<gazeShift id="g4" start="mp2tB.mp2tB14:end" end="mp2tB.mp2tB16:end" offsetdirection="LEFT"></gazeShift>
+	<speech id="mp2tA15" start="g4:start"><text>My.</text></speech>
+	<speech id="mp2tA17" start="g4:end"><text>Moe.</text></speech>
+</bml>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="gazeUp">
+	<gazeShift id="gaze1" start="1" offsetdirection="UP"></gazeShift>
+</bml>

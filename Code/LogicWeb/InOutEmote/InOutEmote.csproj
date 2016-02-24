@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{683A419F-012A-4529-A56D-F3AB5878CC5B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InOutEmote</RootNamespace>
+    <AssemblyName>InOutEmote</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>InOutEmote.Utils.WordsVariants</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Classification">
+      <HintPath>..\..\Emote\EMOTE-Modules-WIP\CaseBasedController\DetectorAnalyzer\bin\Release\Classification.dll</HintPath>
+    </Reference>
+    <Reference Include="DetectorAnalyzer">
+      <HintPath>..\..\Emote\EMOTE-Modules-WIP\CaseBasedController\DetectorAnalyzer\bin\Release\DetectorAnalyzer.exe</HintPath>
+    </Reference>
+    <Reference Include="EmoteEvents">
+      <HintPath>..\..\EmoteEvents\bin\Release\EmoteEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.7.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thalamus">
+      <HintPath>..\..\..\Thalamus\Binaries\Release\Thalamus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="behaviours\gameActions\CustomBaseTutorialAction.cs" />
+    <Compile Include="behaviours\gameActions\PerformBestActionForThisTurn.cs" />
+    <Compile Include="behaviours\PerformMemoryEvent.cs" />
+    <Compile Include="behaviours\PerformUtterance.cs" />
+    <Compile Include="behaviours\PerformWrapup.cs" />
+    <Compile Include="behaviours\utterances\CommentRobotBuiltStructure.cs" />
+    <Compile Include="behaviours\utterances\AnnounceGameEndedNoOil.cs" />
+    <Compile Include="behaviours\utterances\AnnounceGameEndedTimeUp.cs" />
+    <Compile Include="behaviours\utterances\AnnounceGameEndedWin.cs" />
+    <Compile Include="behaviours\utterances\AnnounceHumanTurn.cs" />
+    <Compile Include="behaviours\utterances\AnnounceCurrentPlayer.cs" />
+    <Compile Include="behaviours\utterances\AnnounceNewLevel.cs" />
+    <Compile Include="behaviours\utterances\AnnounceRobotTurn.cs" />
+    <Compile Include="behaviours\utterances\CommentRobotPolicy.cs" />
+    <Compile Include="behaviours\utterances\CommentRobotUpgrade.cs" />
+    <Compile Include="behaviours\utterances\HelpIdlingUsers.cs" />
+    <Compile Include="behaviours\utterances\PerformBaseTutorial.cs" />
+    <Compile Include="behaviours\utterances\PerformOwnConstructionTutorial.cs" />
+    <Compile Include="behaviours\utterances\PerformOwnPolicyTutorial.cs" />
+    <Compile Include="behaviours\utterances\PerformOwnSkipTutorial.cs" />
+    <Compile Include="behaviours\utterances\PerformOwnUpgradeTutorial.cs" />
+    <Compile Include="InitScriptEmoteEmpathic.cs" />
+    <Compile Include="InOutEmote.cs" />
+    <Compile Include="inputs\ActionPlannedByAiForMayorIN.cs" />
+    <Compile Include="inputs\FirstPolicyDoneByRobotIN.cs" />
+    <Compile Include="inputs\FirstSkipDoneByRobotIN.cs" />
+    <Compile Include="inputs\FirstUpgradeDoneByRobotIN.cs" />
+    <Compile Include="inputs\GameEndedWinIN.cs" />
+    <Compile Include="inputs\GameEndedTimeUp.cs" />
+    <Compile Include="inputs\GameEndedNoOilIN.cs" />
+    <Compile Include="inputs\IsFirstTurnIN.cs" />
+    <Compile Include="inputs\IsGameStartedIN.cs" />
+    <Compile Include="inputs\IsFirstSessionIN.cs" />
+    <Compile Include="inputs\LearnerModelMemoryEventIN.cs" />
+    <Compile Include="inputs\MayorTurnIN.cs" />
+    <Compile Include="inputs\EcoTurnIN.cs" />
+    <Compile Include="inputs\EnvTurnIN.cs" />
+    <Compile Include="inputs\NewLevelReachedIN.cs" />
+    <Compile Include="inputs\PolicyImplementedIN.cs" />
+    <Compile Include="inputs\StructureBuiltIN.cs" />
+    <Compile Include="inputs\StructureUpgradedIN.cs" />
+    <Compile Include="inputs\UsersIdlingIN.cs" />
+    <Compile Include="Utils\JsonSerializable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thalamus\InOutThalamusPublisher.cs" />
+    <Compile Include="Thalamus\EventArgs.cs" />
+    <Compile Include="Thalamus\IAllPerceptionClient.cs" />
+    <Compile Include="Thalamus\InOutThalamusClient.cs" />
+    <Compile Include="Utils\WordsVariants.cs" />
+    <Compile Include="UtterancesMapping.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicWebLib\LogicWebLib.csproj">
+      <Project>{5aba1911-2aca-4f5d-b37e-8a6af0489fa0}</Project>
+      <Name>LogicWebLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

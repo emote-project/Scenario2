@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bml id="aliceSpeech" character="NAO">
+	<speech id="alice1" start="1">
+		<text>We're all <sync id="catmad1"/>mad here.</text>
+	</speech>
+<speech id="alice2" start="alice1:end">
+		<text>We're really <sync id="catmad2"/>mad here.</text>
+	</speech>
+</bml>

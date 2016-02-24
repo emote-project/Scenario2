@@ -1,0 +1,26 @@
+{
+	"Name":"SuecaDemo",
+	"Filename":null,
+	"Characters":[{
+		"Name":"SuecaDemo",
+		"Clients":[
+			{
+				"CommandLine":"..\\ThalamusSpeechClient\\ThalamusSpeechClient.exe",
+				"Arguments":"SuecaDemo "
+			},
+			{
+				"CommandLine":"..\\Skene\\Skene.exe",
+				"Arguments":"SuecaDemo "
+			},
+			{
+				"CommandLine":"..\\NuttyTracks\\Binaries\\NuttyTracksStandalone.exe",
+				"Arguments":" -start -n emys"
+			},
+			{
+				"CommandLine":"..\\Emys\\Emys.exe",
+				"Arguments":"7884"
+			}
+		]
+	}],
+	"IsNull":false
+}

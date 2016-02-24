@@ -1,0 +1,7 @@
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWebLib\bin\Release\LogicWebLib.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWebLib\bin\Release\LogicWebLib.pdb
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWebLib\bin\Release\Newtonsoft.Json.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWebLib\bin\Release\Newtonsoft.Json.xml
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWebLib\obj\Release\LogicWebLib.csprojResolveAssemblyReference.cache
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWebLib\obj\Release\LogicWebLib.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWebLib\obj\Release\LogicWebLib.pdb

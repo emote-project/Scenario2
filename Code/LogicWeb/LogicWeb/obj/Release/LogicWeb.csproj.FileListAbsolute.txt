@@ -1,0 +1,7 @@
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWeb\bin\Release\LogicWeb.exe.config
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWeb\obj\Release\LogicWeb.csprojResolveAssemblyReference.cache
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWeb\obj\Release\MainWindow.g.cs
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWeb\obj\Release\App.g.cs
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWeb\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWeb\obj\Release\LogicWeb_MarkupCompile.cache
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\LogicWeb\LogicWeb\obj\Release\LogicWeb_MarkupCompile.lref

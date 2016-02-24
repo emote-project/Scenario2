@@ -1,0 +1,4 @@
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\bin\x64\Release\GBML.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\bin\x64\Release\GBML.pdb
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\obj\x64\Release\GBML.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\obj\x64\Release\GBML.pdb

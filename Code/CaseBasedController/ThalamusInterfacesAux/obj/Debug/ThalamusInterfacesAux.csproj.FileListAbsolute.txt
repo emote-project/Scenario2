@@ -1,0 +1,16 @@
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\ThalamusInterfacesAux.dll.config
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\ThalamusInterfacesAux.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\ThalamusInterfacesAux.pdb
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\Thalamus.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\CookComputing.XmlRpcV2.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\GBML.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\MathNet.Iridium.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\Thalamus.pdb
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\GBML.pdb
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\de\MathNet.Iridium.resources.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\es\MathNet.Iridium.resources.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\bin\Debug\fr\MathNet.Iridium.resources.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\obj\Debug\ThalamusInterfacesAux.dll
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusInterfacesAux\obj\Debug\ThalamusInterfacesAux.pdb

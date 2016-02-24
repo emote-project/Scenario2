@@ -1,0 +1,16 @@
+{
+  "EconomyWeight": 0.4,
+  "EnvironmentWeight": 0.0,
+  "WellbeingWeight": 0.0,
+  "MoneyWeight": 0.1,
+  "PowerWeight": 0.0,
+  "OilWeight": 0.0,
+  "HomesWeight": 0.0,
+  "ScoreUniformityWeight": 0.5,
+  "PowerAdjustParam": 0.7,
+  "MoneyAdjustParam": 0.99,
+  "OilAdjustParam": 0.999,
+  "ScoreAdjustParam": 0.7,
+  "HomesAdjustParam": 0.01,
+  "EnvironmentAdjustParam": 0.99
+}

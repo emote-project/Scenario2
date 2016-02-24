@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<points>
+	<item reference="economyscore">
+		<triggertype>Economy_Delta</triggertype>
+		<triggervalue>25</triggervalue>
+		<numberofpoints>5</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+	<item reference="environmentscore">
+		<triggertype>Environment_Delta</triggertype>
+		<triggervalue>25</triggervalue>
+		<numberofpoints>5</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+	<item reference="wellbeingscore">
+		<triggertype>Wellbeing_Delta</triggertype>
+		<triggervalue>25</triggervalue>
+		<numberofpoints>5</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+	<item reference="wildlifebuild">
+		<triggertype>Wildlifereserve_Build</triggertype>
+		<triggervalue>1</triggervalue>
+		<numberofpoints>3</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+	<item reference="stadiumbuild">
+		<triggertype>Stadium_Build</triggertype>
+		<triggervalue>1</triggervalue>
+		<numberofpoints>3</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+	<item reference="fusionbuild">
+		<triggertype>Fusion_Build</triggertype>
+		<triggervalue>1</triggervalue>
+		<numberofpoints>10</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+	<item reference="supersolarbuild">
+		<triggertype>Supersolar_Build</triggertype>
+		<triggervalue>1</triggervalue>
+		<numberofpoints>5</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+	<item reference="superwindmillbuild">
+		<triggertype>Superwind_Build</triggertype>
+		<triggervalue>1</triggervalue>
+		<numberofpoints>3</numberofpoints>
+		<yearrequirement>-1</yearrequirement>
+	</item>
+</points>

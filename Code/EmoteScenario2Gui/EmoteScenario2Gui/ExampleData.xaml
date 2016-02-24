@@ -1,0 +1,10 @@
+﻿<x:Array Type="m:ThalamusModule"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:m="clr-namespace:EmoteScenario2Gui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <m:ThalamusModule CommandPath="test2.exe" Args="rg" Status="Starting" />
+    <m:ThalamusModule CommandPath="test.exe" Args="testarg" Status="EndingTimeout" StatusReport="The module is taking too long to end"/>
+    <m:ThalamusModule CommandPath="test3.exe" Args="tesasdg" Status="NotStarted" />
+    <m:ThalamusModule CommandPath="test.exe" Args="testarg" Status="Ended" />
+    <m:ThalamusModule CommandPath="test.exe" Args="testarg" Status="Ended" />
+</x:Array>

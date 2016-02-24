@@ -1,0 +1,38 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CaseBasedController.UserControls.Cases" 
+             x:Class="CaseBasedController.UserControls.Cases.CaseControl" 
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="100" Height="40" Width="200">
+
+
+    <UserControl.DataContext>
+        <local:CaseControlViewModel/>
+    </UserControl.DataContext>
+
+
+    <Grid x:Name="LayoutRoot">
+        <!--d:DataContext="{d:DesignData Source={StaticResource testdata}}">-->
+        <Border>
+            <Border.Style>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="BorderBrush" Value="Firebrick"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Enabled}" Value="True">
+                            <Setter Property="BorderBrush" Value="Red"/>
+                            <Setter Property="BorderThickness" Value="3"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <StackPanel>
+                <TextBlock Text="{Binding Name}" TextAlignment="Center"/>
+                <TextBlock Text="{Binding Behaviour}"></TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

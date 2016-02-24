@@ -1,0 +1,477 @@
+{
+  "$id": "1",
+  "Pool": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "Description": "gameActionPlayedDetector",
+        "Behavior": {
+          "$id": "4",
+          "$type": "CaseBasedController.Behavior.EmptyBehaviour, CaseBasedController",
+          "Priority": 0
+        },
+        "Detector": {
+          "$id": "5",
+          "$type": "CaseBasedController.Detection.Enercities.GameActionInstantFeatureDetector, CaseBasedController",
+          "TimePeriod": 1.0,
+          "Description": "gameActionPlayedDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "6",
+        "Description": "oilAboveAverage",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "7",
+          "$type": "CaseBasedController.Detection.Enercities.ResourceAboveAverageDetector, CaseBasedController",
+          "ResourceType": 1,
+          "Description": "oilAboveAverage",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "8",
+        "Description": "powerAboveAverage",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "9",
+          "$type": "CaseBasedController.Detection.Enercities.ResourceAboveAverageDetector, CaseBasedController",
+          "ResourceType": 2,
+          "Description": "powerAboveAverage",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "10",
+        "Description": "populationAboveAverage",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "11",
+          "$type": "CaseBasedController.Detection.Enercities.ResourceAboveAverageDetector, CaseBasedController",
+          "ResourceType": 3,
+          "Description": "populationAboveAverage",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "12",
+        "Description": "moneyAboveAverages",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "13",
+          "$type": "CaseBasedController.Detection.Enercities.ResourceAboveAverageDetector, CaseBasedController",
+          "ResourceType": 0,
+          "Description": "moneyAboveAverages",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "14",
+        "Description": "exploringMenuConstructionDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "15",
+          "$type": "CaseBasedController.Detection.Enercities.ExploringMenuDetector, CaseBasedController",
+          "WatchedMenuType": 0,
+          "Description": "exploringMenuConstructionDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "16",
+        "Description": "exploringMenuPolicyDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "17",
+          "$type": "CaseBasedController.Detection.Enercities.ExploringMenuDetector, CaseBasedController",
+          "WatchedMenuType": 1,
+          "Description": "exploringMenuPolicyDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "18",
+        "Description": "exploringMenuUpgradeDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "19",
+          "$type": "CaseBasedController.Detection.Enercities.ExploringMenuDetector, CaseBasedController",
+          "WatchedMenuType": 2,
+          "Description": "exploringMenuUpgradeDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "20",
+        "Description": "robotSpeakingDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "21",
+          "$type": "CaseBasedController.Detection.Enercities.RobotSpeakingBinaryFeatureDetector, CaseBasedController",
+          "Description": "robotSpeakingDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "22",
+        "Description": "ecoSpeakingDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "23",
+          "$type": "CaseBasedController.Detection.Enercities.HumanPlayerSpeakingBinaryFeatureDetector, CaseBasedController",
+          "HumanPlayer": 1,
+          "Description": "ecoSpeakingDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "24",
+        "Description": "envSpeakingDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "25",
+          "$type": "CaseBasedController.Detection.Enercities.HumanPlayerSpeakingBinaryFeatureDetector, CaseBasedController",
+          "HumanPlayer": 0,
+          "Description": "envSpeakingDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "26",
+        "Description": "lastActionUpgradeDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "27",
+          "$type": "CaseBasedController.Detection.Enercities.LastActionTypeDetector, CaseBasedController",
+          "ActionType": 3,
+          "Description": "lastActionUpgradeDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "28",
+        "Description": "lastActionConstructionDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "29",
+          "$type": "CaseBasedController.Detection.Enercities.LastActionTypeDetector, CaseBasedController",
+          "ActionType": 1,
+          "Description": "lastActionConstructionDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "30",
+        "Description": "lastActionPolicyDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "31",
+          "$type": "CaseBasedController.Detection.Enercities.LastActionTypeDetector, CaseBasedController",
+          "ActionType": 4,
+          "Description": "lastActionPolicyDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "32",
+        "Description": "lastActionSkipDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "33",
+          "$type": "CaseBasedController.Detection.Enercities.LastActionTypeDetector, CaseBasedController",
+          "ActionType": 0,
+          "Description": "lastActionSkipDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "34",
+        "Description": "rulesSaidDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "35",
+          "$type": "CaseBasedController.Detection.Enercities.RulesSaidDetector, CaseBasedController",
+          "Description": "rulesSaidDetector",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "36",
+        "Description": "playerNotInteractingForToLongAndNotAlreadyFired",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "37",
+          "$type": "CaseBasedController.Detection.Composition.AndFeatureDetector, CaseBasedController",
+          "Detectors": {
+            "$id": "38",
+            "$values": [
+              {
+                "$id": "39",
+                "$type": "CaseBasedController.Detection.Composition.AndFeatureDetector, CaseBasedController",
+                "Detectors": {
+                  "$id": "40",
+                  "$values": [
+                    {
+                      "$id": "41",
+                      "$type": "CaseBasedController.Detection.Composition.NotFeatureDetector, CaseBasedController",
+                      "WatchedDetector": {
+                        "$id": "42",
+                        "$type": "CaseBasedController.Detection.Enercities.PlayerInteractionBinaryFeatureDetector, CaseBasedController",
+                        "Description": "playerInteractionInThisTurn",
+                        "ActivationsMinDelayMilliseconds": 0
+                      },
+                      "Description": null,
+                      "ActivationsMinDelayMilliseconds": 0
+                    },
+                    {
+                      "$id": "43",
+                      "$type": "CaseBasedController.Detection.Enercities.DelayFromTurnStartDetector, CaseBasedController",
+                      "Delay": 15000.0,
+                      "Description": "playerTurnLastingTooLong",
+                      "ActivationsMinDelayMilliseconds": 0
+                    },
+                    {
+                      "$id": "44",
+                      "$type": "CaseBasedController.Detection.Composition.OrFeatureDetector, CaseBasedController",
+                      "Detectors": {
+                        "$id": "45",
+                        "$values": [
+                          {
+                            "$id": "46",
+                            "$type": "CaseBasedController.Detection.Enercities.PlayerTurnBinaryFeatureDetector, CaseBasedController",
+                            "Player": 0,
+                            "Description": "ecoTurnDetector",
+                            "ActivationsMinDelayMilliseconds": 0
+                          },
+                          {
+                            "$id": "47",
+                            "$type": "CaseBasedController.Detection.Enercities.PlayerTurnBinaryFeatureDetector, CaseBasedController",
+                            "Player": 1,
+                            "Description": "envTurnDetector",
+                            "ActivationsMinDelayMilliseconds": 0
+                          }
+                        ]
+                      },
+                      "Description": "humanTurnDetector",
+                      "ActivationsMinDelayMilliseconds": 0
+                    },
+                    {
+                      "$id": "48",
+                      "$type": "CaseBasedController.Detection.Enercities.EarlyGameDetector, CaseBasedController",
+                      "Description": "earlyGameDetector",
+                      "ActivationsMinDelayMilliseconds": 0
+                    }
+                  ]
+                },
+                "Description": "playerNotInteractingForTooLongDetector",
+                "ActivationsMinDelayMilliseconds": 0
+              },
+              {
+                "$id": "49",
+                "$type": "CaseBasedController.Detection.Composition.NotFeatureDetector, CaseBasedController",
+                "WatchedDetector": {
+                  "$id": "50",
+                  "$type": "CaseBasedController.Detection.Composition.HasFiredFeatureDetector, CaseBasedController",
+                  "WatchedDetector": {
+                    "$ref": "39"
+                  },
+                  "Description": "playerNotInteractingForTooLongDetectorAlreadyFired ",
+                  "ActivationsMinDelayMilliseconds": 0
+                },
+                "Description": null,
+                "ActivationsMinDelayMilliseconds": 0
+              }
+            ]
+          },
+          "Description": "playerNotInteractingForToLongAndNotAlreadyFired",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "51",
+        "Description": "earlyGameDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$ref": "48"
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "52",
+        "Description": "aiTakingTooLongDuringAITurn",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$id": "53",
+          "$type": "CaseBasedController.Detection.Composition.AndFeatureDetector, CaseBasedController",
+          "Detectors": {
+            "$id": "54",
+            "$values": [
+              {
+                "$id": "55",
+                "$type": "CaseBasedController.Detection.Enercities.PlayerTurnBinaryFeatureDetector, CaseBasedController",
+                "Player": 2,
+                "Description": "aiTurnDetector",
+                "ActivationsMinDelayMilliseconds": 0
+              },
+              {
+                "$id": "56",
+                "$type": "CaseBasedController.Detection.Enercities.DelayFromTurnStartDetector, CaseBasedController",
+                "Delay": 9000.0,
+                "Description": "aiTakingTooLongDetector",
+                "ActivationsMinDelayMilliseconds": 0
+              }
+            ]
+          },
+          "Description": "aiTakingTooLongDuringAITurn",
+          "ActivationsMinDelayMilliseconds": 0
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "57",
+        "Description": "playerInteractionInThisTurn",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$ref": "42"
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "58",
+        "Description": "ecoTurnDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$ref": "46"
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "59",
+        "Description": "envTurnDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$ref": "47"
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      },
+      {
+        "$id": "60",
+        "Description": "aiTurnDetector",
+        "Behavior": {
+          "$ref": "4"
+        },
+        "Detector": {
+          "$ref": "55"
+        },
+        "ExecutionStarted": false,
+        "IsCancellable": true,
+        "Enabled": true
+      }
+    ]
+  }
+}

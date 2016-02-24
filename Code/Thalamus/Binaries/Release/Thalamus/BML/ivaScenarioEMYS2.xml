@@ -1,0 +1,12 @@
+<bml id="EMYS">
+	<face id="faceDontTouchMeAnswer" start="NAO.postureComplain:end"><lexeme lexeme="Anger5"/></face>
+	<face id="faceSorry" start="sorry"><lexeme lexeme="Sadness3"/></face>
+	<speech id="dontTouchMeAnswer" start="faceDontTouchMeAnswer:start">
+		<text>I would get him if I could move. <sync id="sorry"/> Sorry.</text>
+	</speech>
+	
+	<face id="faceByeBye" start="NAO.leaving:end"><lexeme lexeme="Joy3"/></face>
+	<speech id="byeBye" start="faceByeBye:start">
+		<text>Bye bye</text>
+	</speech>
+</bml>

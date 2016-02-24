@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="mp3tA">
+	<speech id="mp3tA1" start="1"><text>Eeny.</text></speech>
+	<speech id="mp3tA4" start="mp3tC.mp3tC3:end"><text>Moe.</text></speech>
+	<speech id="mp3tA7" start="mp3tC.mp3tC6:end"><text>By the.</text></speech>
+	<speech id="mp3tA10" start="mp3tC.mp3tC9:end"><text>Hollers.</text></speech>
+	<speech id="mp3tA13" start="mp3tC.mp3tC12:end"><text>Eeny.</text></speech>
+	<speech id="mp3tA16" start="mp3tC.mp3tC15:end"><text>Nee.</text></speech>
+</bml>

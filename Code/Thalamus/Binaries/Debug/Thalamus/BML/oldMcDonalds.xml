@@ -1,0 +1,6 @@
+<bml id="oldMcDonalds1">
+<speech id="la1" start="0"><text>Old macDonalds had a farm</text></speech>
+<speech id="la2" start="la1:end"><text>ih, aw, ih, aw, oh</text></speech>
+<speech id="la3" start="la2:end"><text>la, la, la, lo, le, le, lu.</text></speech>
+<speech id="la4" start="la3:end"><text>li, la, li, la, lu</text></speech>
+</bml>

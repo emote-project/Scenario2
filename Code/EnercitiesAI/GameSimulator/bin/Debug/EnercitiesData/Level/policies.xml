@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+	<policy type="NotUsed">
+		<researchcost>1000</researchcost>
+		<researchtime>0,1</researchtime>
+		<affectedstructures>
+			<structure type="NotUsed">
+				<homes>0</homes>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0,1</environmentscore>
+				<economyscore>0,1</economyscore>
+				<wellbeingscore>0,1</wellbeingscore>
+			</structure>
+		</affectedstructures>
+	</policy>
+	<policy type="CO2_Taxes">
+		<researchcost>5</researchcost>
+		<researchtime>0,1</researchtime>
+		<affectedstructures>
+			<structure type="Light_Industry">
+				<homes>0</homes>
+				<annualcost>-0,5</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>-1</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Heavy_Industry">
+				<homes>0</homes>
+				<annualcost>-2</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>-4</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Commercial">
+				<homes>0</homes>
+				<annualcost>-1</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>-2</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+		</affectedstructures>
+	</policy>
+	<policy type="Electric_Car_Grid">
+		<researchcost>50</researchcost>
+		<researchtime>0,1</researchtime>
+		<affectedstructures>
+			<structure type="Suburban">
+				<homes>0</homes>
+				<annualcost>0</annualcost>
+				<annualenergy>-0,1</annualenergy>
+				<annualoil>0,1</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Urban">
+				<homes>0</homes>
+				<annualcost>0</annualcost>
+				<annualenergy>-0,5</annualenergy>
+				<annualoil>0,5</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Residential_Tower">
+				<homes>0</homes>
+				<annualcost>0</annualcost>
+				<annualenergy>-2</annualenergy>
+				<annualoil>2</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+		</affectedstructures>
+	</policy>
+	<policy type="Energy_Education_Program">
+		<researchcost>5</researchcost>
+		<researchtime>0,1</researchtime>
+		<affectedstructures>
+			<structure type="Suburban">
+				<homes>0</homes>
+				<annualcost>0,1</annualcost>
+				<annualenergy>0,1</annualenergy>
+				<annualoil>0,1</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Urban">
+				<homes>0</homes>
+				<annualcost>0,5</annualcost>
+				<annualenergy>0,5</annualenergy>
+				<annualoil>0,5</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Residential_Tower">
+				<homes>0</homes>
+				<annualcost>2</annualcost>
+				<annualenergy>2</annualenergy>
+				<annualoil>2</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+		</affectedstructures>
+	</policy>
+	<policy type="Eco_Tourism_Program">
+		<researchcost>20</researchcost>
+		<researchtime>0,1</researchtime>
+		<affectedstructures>
+			<structure type="Forest">
+				<homes>0</homes>
+				<annualcost>0,1</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0,5</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>1</wellbeingscore>
+			</structure>
+			<structure type="Wildlife_Reserve">
+				<homes>0</homes>
+				<annualcost>0,2</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>1</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>2</wellbeingscore>
+			</structure>
+		</affectedstructures>
+	</policy>
+		<policy type="Sustainable_Technology_Fund">
+		<researchcost>75</researchcost>
+		<researchtime>0,1</researchtime>
+		<affectedstructures>
+			<structure type="Super_WindTurbine">
+				<homes>0</homes>
+				<annualcost>0</annualcost>
+				<annualenergy>5</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>3</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Super_Solar">
+				<homes>0</homes>
+				<annualcost>0</annualcost>
+				<annualenergy>10</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>5</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+			<structure type="Nuclear_Fusion">
+				<homes>0</homes>
+				<annualcost>0</annualcost>
+				<annualenergy>30</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>10</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+			</structure>
+		</affectedstructures>
+	</policy>
+</policies>

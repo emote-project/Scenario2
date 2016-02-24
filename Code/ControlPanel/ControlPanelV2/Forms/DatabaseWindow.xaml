@@ -1,0 +1,103 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModels="clr-namespace:ControlPanel.viewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:UserControl="clr-namespace:ControlPanel.Thalamus.UserControl" x:Class="ControlPanel.Forms.DatabaseWindow"
+        mc:Ignorable="d"
+        Title="Student Database" Height="349" Width="728" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Icon="../Assets/ControlPanel.ico">
+
+
+    <Window.DataContext>
+        <viewModels:StudentsDBViewModel/>
+    </Window.DataContext>
+
+
+
+    <Grid  d:DataContext="{d:DesignData Source=exampleData/MainWindowExampleData.xaml}">
+        <DataGrid x:Name="MainGrid" ItemsSource="{Binding Learners}" Margin="0,36,0,81" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Name" Width="SizeToCells" IsReadOnly="True" MinWidth="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding firstName}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Middle Name" Width="SizeToCells" IsReadOnly="True" MinWidth="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding middleName}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Last Name" Width="SizeToCells" IsReadOnly="True" MinWidth="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding lastName}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Birth" Width="SizeToCells" IsReadOnly="True" MinWidth="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding birth}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Sex" Width="SizeToCells" IsReadOnly="True" MinWidth="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding sex}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Height="46" VerticalAlignment="Bottom" Margin="0,0,0,30">
+            <TextBox x:Name="txtFirstName" Margin="10,16,0,10" HorizontalAlignment="Left" Width="112" />
+            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="112"/>
+            <TextBlock HorizontalAlignment="Left" Margin="127,0,0,0" TextWrapping="Wrap" Text="Middle Name" VerticalAlignment="Top" Width="112"/>
+            <TextBox x:Name="txtMiddleName" Margin="127,16,0,10" HorizontalAlignment="Left" Width="112" />
+            <TextBlock HorizontalAlignment="Left" Margin="244,0,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="112"/>
+            <TextBox x:Name="txtLastName" Margin="244,16,0,10" HorizontalAlignment="Left" Width="112" />
+            <TextBlock HorizontalAlignment="Left" Margin="361,0,0,0" TextWrapping="Wrap" Text="Birth" VerticalAlignment="Top" Width="112"/>
+            <DatePicker x:Name="DatePickerBirth" HorizontalAlignment="Left" Margin="361,16,0,0" VerticalAlignment="Top" Width="112" />
+            <ComboBox x:Name="cmbSex" HorizontalAlignment="Left" Margin="478,16,0,0" VerticalAlignment="Top" Width="34" Height="20">
+                <ComboBoxItem Content="M"/>
+                <ComboBoxItem Content="F"/>
+            </ComboBox>
+            <TextBlock HorizontalAlignment="Left" Margin="478,0,0,0" TextWrapping="Wrap" Text="Sex" VerticalAlignment="Top" Width="34"/>
+            <Button x:Name="AddButton" Content="Add" Width="50" Margin="0,16,65,0" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Click="AddButton_OnClick"/>
+            <Button x:Name="RemoveButton" Content="Remove" Width="50" Margin="0,16,10,0" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Click="RemoveButton_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <DataTrigger Binding ="{Binding SelectedIndex, ElementName=MainGrid}" Value="-1">
+                                <Setter Property="IsEnabled" Value="false"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
+        </Grid>
+
+
+
+
+        <StatusBar Height="25" VerticalAlignment="Bottom">
+            <StatusBarItem>
+                <TextBlock x:Name="DatabaseStatus">Waiting for Thalamus to connect...</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+        <Button x:Name="ImportButton" Content="Import" Width="50" Margin="0,10,10,0" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Click="ImportButton_OnClick"/>
+        <Button x:Name="RefreshButton" Content="Refresh" ToolTip="Refresh list with data from the database" Width="50" Margin="0,10,65,0" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Click="RefreshButton_OnClick" />
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Surface name must be the same as the enum name.
+
+	<surface name="NotUsed">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+	</surface>
+
+SurfaceTypes:
+    NotUsed
+    Plains
+    Hills
+    Ocean
+    River
+    
+   Modified: Pedro Sequeira, 2014/07/23
+   
+   Now build rules can be read directly from surfaces xml according to the tags:
+   
+   <build-rules>
+      <structure>...</structure>
+      ...
+   </build-rules>
+-->
+<surfaces>
+	<surface name="NotUsed">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+    <build-rules></build-rules>
+	</surface>
+	<surface name="Plains">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+    <build-rules>
+      <structure>City_Hall</structure>
+      <structure>Coal_Plant</structure>
+      <structure>Commercial</structure>
+      <structure>Forest</structure>
+      <structure>Heavy_Industry</structure>
+      <structure>Light_Industry</structure>
+      <structure>Nuclear_Plant</structure>
+      <structure>Park</structure>
+      <structure>Solar_Plant</structure>
+      <structure>Stadium</structure>
+      <structure>Suburban</structure>
+      <structure>Urban</structure>
+      <structure>Wildlife_Reserve</structure>
+      <structure>Windmills</structure>
+      <structure>Coal_Plant_Small</structure>
+      <structure>Residential_Tower</structure>
+      <structure>Super_Solar</structure>
+      <structure>Super_WindTurbine</structure>
+      <structure>Nuclear_Fusion</structure>
+      <structure>Market</structure>
+      <structure>Public_Services</structure>
+    </build-rules>
+	</surface>
+	<surface name="Plains2">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+    <build-rules>
+      <structure>City_Hall</structure>
+      <structure>Coal_Plant</structure>
+      <structure>Commercial</structure>
+      <structure>Forest</structure>
+      <structure>Heavy_Industry</structure>
+      <structure>Light_Industry</structure>
+      <structure>Nuclear_Plant</structure>
+      <structure>Park</structure>
+      <structure>Solar_Plant</structure>
+      <structure>Stadium</structure>
+      <structure>Suburban</structure>
+      <structure>Urban</structure>
+      <structure>Wildlife_Reserve</structure>
+      <structure>Windmills</structure>
+      <structure>Coal_Plant_Small</structure>
+      <structure>Residential_Tower</structure>
+      <structure>Super_Solar</structure>
+      <structure>Super_WindTurbine</structure>
+      <structure>Nuclear_Fusion</structure>
+      <structure>Market</structure>
+      <structure>Public_Services</structure>
+    </build-rules>
+	</surface>
+	<surface name="Hills">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+    <build-rules>
+      <structure>City_Hall</structure>
+      <structure>Coal_Plant</structure>
+      <structure>Commercial</structure>
+      <structure>Forest</structure>
+      <structure>Heavy_Industry</structure>
+      <structure>Light_Industry</structure>
+      <structure>Nuclear_Plant</structure>
+      <structure>Park</structure>
+      <structure>Solar_Plant</structure>
+      <structure>Stadium</structure>
+      <structure>Suburban</structure>
+      <structure>Urban</structure>
+      <structure>Wildlife_Reserve</structure>
+      <structure>Windmills</structure>
+      <structure>Coal_Plant_Small</structure>
+      <structure>Residential_Tower</structure>
+      <structure>Super_Solar</structure>
+      <structure>Super_WindTurbine</structure>
+      <structure>Nuclear_Fusion</structure>
+      <structure>Market</structure>
+      <structure>Public_Services</structure>
+    </build-rules>
+	</surface>
+	<surface name="Ocean">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+    <build-rules>
+      <structure>Windmills</structure>
+    </build-rules>
+	</surface>
+	<surface name="River">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+    <build-rules></build-rules>
+	</surface>
+	<surface name="Hydro_River">
+		<environmentscore>0</environmentscore>
+		<economyscore>0</economyscore>
+		<wellbeingscore>0</wellbeingscore>
+    <build-rules>
+      <structure>Hydro_Plant</structure>
+    </build-rules>
+	</surface>
+</surfaces>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="CaseCanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="768" Width="1024"
+        xmlns:graphxctrl="clr-namespace:GraphX.Controls;assembly=GraphX.WPF.Controls"
+        xmlns:local="clr-namespace:CaseCanvas.GraphDefinition">
+    <Grid>
+        <graphxctrl:ZoomControl x:Name="gg_zoomctrl">
+            <local:GraphAreaExample x:Name="gg_Area">
+            </local:GraphAreaExample>
+        </graphxctrl:ZoomControl>
+    </Grid>
+</Window>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="gazeRight">
+	<gaze id="gaze1" start="0" end="3" offsetangle="50" offsetdirection="RIGHT"></gaze>
+</bml>

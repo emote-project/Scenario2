@@ -1,0 +1,73 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LogicWeb" x:Class="LogicWeb.MainWindow"
+        Title="Logic Web" Height="350" Width="742" Closed="MainWindow_OnClosed">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Load InOut Library" Click="LoadInOutLib_Click"/>
+                <MenuItem Header="Save this web" Click="SaveThisWebMenuItem_OnClick"></MenuItem>
+                <Separator/>
+                <MenuItem Header="Exit" Click="Exit_OnClick"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="106*"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <TreeView  Margin="0,0,10,0" x:Name="TreeView" ItemsSource="{Binding NodesWeb}">
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="IsExpanded" Value="True" />
+                        <Setter Property="FontWeight" Value="Normal" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Active}" Value="True">
+                                <Setter Property="Background" Value="PaleGreen"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <!--<DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="Background.Opacity" From="0.0" To="1.0" Duration="0:0:0.5"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>-->
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TreeView.ItemContainerStyle>
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Parents}">
+                        <TextBlock Text="{Binding Description}" MouseLeftButtonUp="UIElement_OnMouseLeftButtonUp"  />
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+                <DataGrid ItemsSource="{Binding QueuedBehaviour}" AutoGenerateColumns="False" Grid.Column="1" HorizontalAlignment="Right" Width="290" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding FrameIndex}" Header="Fr.#"/>
+                    <DataGridTextColumn Binding="{Binding StateType}" Header="State"/>
+                    <DataGridTextColumn Binding="{Binding BehaviourDescription}" Header="Behaviour"/>
+                </DataGrid.Columns>
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding StateType}" Value="Executed">
+                                <Setter Property="Foreground" Value="DarkGray"></Setter>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding StateType}" Value="Executing">
+                                <Setter Property="Foreground" Value="ForestGreen"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+            </DataGrid>
+        </Grid>
+
+    </DockPanel>
+</Window>

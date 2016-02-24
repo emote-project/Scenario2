@@ -1,0 +1,9 @@
+C:\Users\monstrengo\Documents\Thalamus\GBML\bin\x64\Debug\GBML.dll
+C:\Users\monstrengo\Documents\Thalamus\GBML\bin\x64\Debug\GBML.pdb
+C:\Users\monstrengo\Documents\Thalamus\GBML\obj\x64\Debug\GBML.csprojResolveAssemblyReference.cache
+C:\Users\monstrengo\Documents\Thalamus\GBML\obj\x64\Debug\GBML.dll
+C:\Users\monstrengo\Documents\Thalamus\GBML\obj\x64\Debug\GBML.pdb
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\bin\x64\Debug\GBML.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\bin\x64\Debug\GBML.pdb
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\obj\x64\Debug\GBML.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\GBML\obj\x64\Debug\GBML.pdb

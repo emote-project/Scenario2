@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bml id="alice" character="NAO">
+
+
+	<gaze id="gazeShift1" start="1" end="alice1:end" target="cat"></gaze>
+	<face id="face0" start="gazeShift1:start"><lexeme lexeme="Joy1"/></face>
+	<speech id="alice1" start="gazeShift1:start">
+		<text>But I don't want to <sync id="alicemad1"/> go among mad people.</text>
+	</speech>
+	<face id="face1" start="alicemad1"><lexeme lexeme="Disgust2"/></face>
+
+	
+	<gazeShift id="gazeShift2" start="alice1:end" target="alice"></gazeShift>
+	<face id="face2" start="gazeShift2:start"><lexeme lexeme="Sadness2"/></face>
+	<speech id="cat1" start="gazeShift2:start">
+		<text>Oh, you can't help that.</text>
+	</speech>
+	<speech id="cat2" start="cat1:end">
+		<text>We're all <sync id="catmad1"/>mad here.</text>
+	</speech>
+	<speech id="cat3" start="cat2:end">
+		<text>I'm <sync id="catmad2"/>mad. </text>
+	</speech>
+	<speech id="cat4" start="cat3:end">
+		<text>You're <sync id="catmad3"/>mad.</text>
+	</speech>
+	<face id="face3" start="catmad1"><lexeme lexeme="Anger1"/></face>
+	<face id="face4" start="catmad2"><lexeme lexeme="Anger2"/></face>
+	<face id="face5" start="catmad3"><lexeme lexeme="Anger3"/></face>
+	
+	
+	<gazeShift id="gazeShift3" start="cat4:end" target="cat"></gazeShift>
+	<speech id="alice2" start="gazeShift3:start">
+		<text>How do you know I'm mad?</text>
+	</speech>
+	<face id="face6" start="gazeShift3:start"><lexeme lexeme="Anger1"/></face>
+	
+	
+	
+	<gazeShift id="gazeShift4" start="alice2:end" target="alice"></gazeShift>
+	<speech id="cat5" start="gazeShift4:start">
+		<text>You must be.</text>
+	</speech>
+	<face id="face7" start="cat5:end"><lexeme lexeme="Disgust1"/></face>
+	<speech id="cat6" start="cat5:end">
+		<text>Or you wouldn't have come here.</text>
+	</speech>
+	
+	
+	
+	<gazeShift id="gazeShift5" start="cat6:end" target="cat"></gazeShift>
+	<face id="face8" start="cat6:end"><lexeme lexeme="Disgust2"/></face>
+	<speech id="alice3" start="gazeShift5:start">
+		<text>And how do you know that <sync id="alicejoy1"/> you're mad?</text>
+	</speech>
+	<face id="face3" start="alicejoy1"><lexeme lexeme="Joy1"/></face>
+	
+	
+	<gazeShift id="gazeShift6" start="alice3:end" target="alice"></gazeShift>
+	<speech id="cat7" start="gazeShift6:start">
+		<text>To begin with, a <sync id="catsurprise1"/> dog's not mad.</text>
+	</speech>
+	<face id="face9" start="catsurprise1"><lexeme lexeme="Surprise1"/></face>
+	<face id="face10" start="cat7:end"><lexeme lexeme="Disgust1"/></face>
+	<speech id="cat8" start="cat7:end">
+		<text>You grant that?</text>
+	</speech>
+	
+	
+	<gazeShift id="gazeShift7" start="cat8:end" target="cat"></gazeShift>
+	<face id="face11" start="gazeShift7:start"><lexeme lexeme="Disgust1"/></face>
+	<speech id="alice4" start="gazeShift7:start">
+		<text>I suppose so.</text>
+	</speech>
+	
+	
+	
+	<gazeShift id="gazeShift8" start="alice4:end" end="cat11:end" target="alice"></gazeShift>
+	<speech id="cat9" start="gazeShift8:start">
+	  <text>Well, then, you see, a dog <sync id="catmad4"/> growls when it's <sync id="catmad5"/>angry, and <sync id="catjoy1"/>wags its tail when it's <sync id="catjoy2"/>pleased.</text>
+	</speech>
+	<face id="face12" start="catmad4"><lexeme lexeme="Anger3"/></face>
+	<face id="face13" start="catmad5"><lexeme lexeme="Anger1"/></face>
+	<face id="face14" start="catjoy1"><lexeme lexeme="Joy3"/></face>
+	<face id="face15" start="catjoy2"><lexeme lexeme="Joy1"/></face>
+	<speech id="cat10" start="cat9:end">
+		<text>Now I <sync id="catmad6"/>growl when I'm <sync id="catjoy3"/>pleased, and <sync id="catjoy4"/>wag my tail when I'm <sync id="catmad7"/>angry.</text>
+	</speech>
+	<face id="face16" start="catmad6"><lexeme lexeme="Anger3"/></face>
+	<face id="face17" start="catjoy3"><lexeme lexeme="Joy1"/></face>
+	<face id="face18" start="catjoy4"><lexeme lexeme="Joy3"/></face>
+	<face id="face19" start="catmad7"><lexeme lexeme="Anger1"/></face>
+	<speech id="cat11" start="cat10:end">
+		<text>Therefore I'm mad.</text>
+	</speech>
+	<face id="face20" start="cat11:start"><lexeme lexeme="Disgust3"/></face>
+</bml>

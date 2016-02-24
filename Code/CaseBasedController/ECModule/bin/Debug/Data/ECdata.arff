@@ -1,0 +1,26 @@
+@relation 'header-data'
+
+@attribute L-Anger numeric
+@attribute L-Disgust numeric
+@attribute L-Fear numeric
+@attribute L-Joy numeric
+@attribute L-Sadness numeric
+@attribute L-Surprise numeric
+@attribute L-Neutral numeric
+@attribute L-LookAtX numeric
+@attribute L-LookAtY numeric
+@attribute L-Smile numeric
+@attribute R-Anger numeric
+@attribute R-Disgust numeric
+@attribute R-Fear numeric
+@attribute R-Joy numeric
+@attribute R-Sadness numeric
+@attribute R-Surprise numeric
+@attribute R-Neutral numeric
+@attribute R-LookAtX numeric
+@attribute R-LookAtY numeric
+@attribute R-Smile numeric
+@attribute EC {Positive,Negative}
+
+@data
+0,0,0,0,0,0,0,0.108911,0.207921,0,0,0,0,0,0,0,0,-0.014851,0.336634,0,Positive

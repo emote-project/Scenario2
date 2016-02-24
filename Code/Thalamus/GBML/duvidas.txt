@@ -1,0 +1,44 @@
+can behaviors inside a required block be executed insequence?
+if one that not the first fails, should the behaviors that are already runing be terminated?
+should the terminated behaviors release an "end" event?
+
+example:
+
+<bml>
+	<required>
+		<gaze id="g1" target="person1" start="0" end="5"/>
+		<speech id="s1" start="1">
+			<text>Pick-a-boo, I can see you!</text>
+		</speech>
+	</required>
+</bml>
+
+If s1 fails, should g1 end immediately instead of ending at 5?
+In this case, should the event "g1:end" be launched?
+Semantically this questions if the events that should happen after g1 ends are to be executed or not.
+
+I propose that this event should be launched, meaning that behaviors that should not respond to the event in case of fail should also be included in the required block. 
+Of course this will introduce new requirements in the syncref definition:
+
+[block_id:]behavior_id:sync_id [+/- offset] -- A reference to a sync point of another behavior, optionally with a float offset in seconds. By default, this is a behavior in the same <bml> block that the syncref is contained in; if optional prefix block_id: is present, the syncref specifies a sync point of a behavior in the <bml> block with that ID. 
+<ADDED>
+If sync_id is "end*", it means that the sync point matches with both [block_id:]behavior_id:end and [block_id:]behavior_id:end*. This means that we can used the [block_id:]behavior_id:end* event to notify when a behaviors terminates due to failure, and have some behaviors respond to it and others not.
+
+Example:
+<bml>
+	<required>
+		<gaze id="g1" target="person1" start="0" end="5"/>
+		<speech id="s1" start="1">
+			<text>Pick-a-boo, I can see you!</text>
+		</speech>
+	</required>
+	<posture id="p1" start=g1:end>
+		<pose type="ARMS" lexeme="ARMS_AKIMBO">
+	</posture>
+	<speech id="s2" start=g1:end*>
+		<text>Now I cannot.</text>
+	</speech>
+</bml>
+
+In this example, if g1 completes successfully, both p1 and s2 are executed, because the event g1:end is sent, and "g1:end*" matches with both "g1:end" and "g1:end*".
+In case g1 fails, p1 is not executed, but s2 is.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="mp2tB">
+	<speech id="mp2tB2" start="mp2tA.mp2tA1:end"><text>Meeny.</text></speech>
+	<speech id="mp2tB4" start="mp2tA.mp2tA3:end"><text>Moe.</text></speech>
+	<speech id="mp2tB6" start="mp2tA.mp2tA5:end"><text>Tiger.</text></speech>
+	<speech id="mp2tB8" start="mp2tA.mp2tA7:end"><text>Toe.</text></speech>
+	<speech id="mp2tB10" start="mp2tA.mp2tA9:end"><text>Hollers.</text></speech>
+	<speech id="mp2tB12" start="mp2tA.mp2tA11:end"><text>Go.</text></speech>
+	<speech id="mp2tB14" start="mp2tA.mp2tA13:end"><text>Meeny.</text></speech>
+	<speech id="mp2tB16" start="mp2tA.mp2tA15:end"><text>Nee.</text></speech>
+</bml>

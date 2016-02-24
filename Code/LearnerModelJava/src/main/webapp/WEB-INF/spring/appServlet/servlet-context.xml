@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	 <annotation-driven /> 
+
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+	<context:property-placeholder location="classpath*:META-INF/spring/*.properties" />
+	<context:component-scan base-package="uk.co.emote" />
+
+	
+	<!-- <beans:bean id="scenarioManager" class="uk.co.namshub.ScenarioManager">
+		<beans:property name="marshaller" ref="castorMarshaller" />
+		<beans:property name="unmarshaller" ref="castorMarshaller" />
+	</beans:bean>
+
+	<beans:bean id="learnerModelManager" class="uk.co.namshub.LearnerModelManager">
+		<beans:property name="marshaller" ref="castorMarshaller" />
+		<beans:property name="unmarshaller" ref="castorMarshaller" />
+	</beans:bean>
+
+	<beans:bean id="nextTellManager" class="uk.co.namshub.NextTellManager">
+		<beans:property name="marshaller" ref="castorMarshaller" />
+		<beans:property name="unmarshaller" ref="castorMarshaller" />
+	</beans:bean>
+
+
+	<beans:bean id="taskLogManager" class="uk.co.namshub.TaskLogManager">
+		<beans:property name="marshaller" ref="castorMarshaller" />
+		<beans:property name="unmarshaller" ref="castorMarshaller" />
+	</beans:bean>
+
+	<beans:bean id="questionnaireManager" class="uk.co.namshub.QuestionnaireManager">
+		<beans:property name="marshaller" ref="castorMarshaller" />
+		<beans:property name="unmarshaller" ref="castorMarshaller" />
+	</beans:bean>
+ -->
+
+	<beans:bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<beans:property name="corePoolSize" value="5" />
+		<beans:property name="maxPoolSize" value="10" />
+		<beans:property name="queueCapacity" value="25" />
+	</beans:bean>
+	
+	  <beans:bean class="org.apache.commons.dbcp.BasicDataSource" id="dataSource">
+    <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <beans:property name="url" value="jdbc:mysql://localhost:3306/learnerModel"/>
+    <beans:property name="username" value="learnerModel"/>
+    <beans:property name="password" value="learnerModel"/>
+  </beans:bean>
+   
+  <!-- EntityManagerFactory -->
+  <beans:bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
+    <beans:property name="persistenceUnitName" value="persistenceUnit"/>
+    <beans:property name="dataSource" ref="dataSource"/>
+  </beans:bean>
+   
+  <!-- Transaction Manager -->
+  <beans:bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
+    <beans:property name="entityManagerFactory" ref="entityManagerFactory"/>
+  </beans:bean>
+   
+  <!-- Enable @Transactional annotation -->
+   <tx:annotation-driven/> 
+
+	<beans:bean id="castorMarshaller"
+		class="org.springframework.oxm.castor.CastorMarshaller">
+		<beans:property name="targetClasses">
+			<beans:list>
+				<!-- <beans:value>uk.co.namshub.Scenario</beans:value>
+				<beans:value>uk.co.namshub.Activity</beans:value>
+				<beans:value>uk.co.namshub.Step</beans:value>
+				<beans:value>uk.co.namshub.LearnerModel</beans:value>
+				<beans:value>uk.co.namshub.Competency</beans:value>
+				<beans:value>uk.co.namshub.MapObject</beans:value>
+				<beans:value>uk.co.namshub.ScenarioLog</beans:value>
+				<beans:value>uk.co.namshub.TaskLog</beans:value>
+				<beans:value>uk.co.namshub.TaskLogItem</beans:value>
+				<beans:value>org.joda.time.DateTime</beans:value>
+				<beans:value>uk.co.namshub.Questionnaire</beans:value>
+				<beans:value>uk.co.namshub.QuestionnaireLog</beans:value>
+				<beans:value>uk.co.namshub.QuestionnaireAnswer</beans:value>
+				<beans:value>uk.co.namshub.Question</beans:value>
+				<beans:value>uk.co.namshub.AnswerAttempt</beans:value>
+				<beans:value>uk.co.namshub.CompetencyItem</beans:value>
+				<beans:value>uk.co.namshub.MapMessage</beans:value>
+				<beans:value>uk.co.namshub.ThalamusMapAction</beans:value>
+				<beans:value>uk.co.namshub.MapMessage</beans:value>
+				<beans:value>uk.co.namshub.TeacherId</beans:value>
+				<beans:value>uk.co.namshub.StudentId</beans:value>
+				<beans:value>uk.co.namshub.NextTellDetails</beans:value>
+				<beans:value>uk.co.namshub.Layer</beans:value>
+				<beans:value>uk.co.namshub.PopUpContentsLine</beans:value>
+				<beans:value>uk.co.namshub.PopUpContents</beans:value>-->
+				<beans:value>java.util.Date</beans:value> 
+			</beans:list>
+		</beans:property>
+		
+		
+		
+		
+	</beans:bean>
+
+</beans:beans>

@@ -1,0 +1,11 @@
+﻿<Window x:Class="PBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PBot Classifier" Height="251" Width="492"
+        x:Name="Window"
+        Closed="MainWindow_OnClosed">
+    <Grid Background="#FFFFE7EB">
+        <TextBlock Text="Classification results: " FontWeight="Bold" Foreground="DeepPink" Height="18" VerticalAlignment="Top"/>
+        <ListView ItemsSource="{Binding ElementName=Window, Path=Results }" Background="Transparent" Margin="0,18,0,0"/>
+    </Grid>
+</Window>

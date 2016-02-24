@@ -1,0 +1,16 @@
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\ThalamusClientGUI.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\ThalamusClientGUI.pdb
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\Thalamus.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\CookComputing.XmlRpcV2.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\GBML.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\MathNet.Iridium.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\Newtonsoft.Json.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\Thalamus.pdb
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\GBML.pdb
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\Newtonsoft.Json.xml
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\de\MathNet.Iridium.resources.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\es\MathNet.Iridium.resources.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\bin\Release\fr\MathNet.Iridium.resources.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\obj\Release\ThalamusClientGUI.csprojResolveAssemblyReference.cache
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\obj\Release\ThalamusClientGUI.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusClientGUI\obj\Release\ThalamusClientGUI.pdb

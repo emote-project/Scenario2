@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+Grid  ranges from 0 to width/height (excluded)
+gridunit not entered here are void, not interactable
+    
+    Plains,
+    Hills,
+    Ocean,
+    River
+	
+		NotUsed,
+		Park,
+		Forest,
+		Wildlife_Reserve,
+		Suburban,
+		Urban,
+		Special,
+		Light_Industry,
+		Heavy_Industry,
+		Commercial,
+		Coal_Plant,
+		Nuclear_Plant,
+		Windmills,
+		Solar_Plant,
+		Hydro_Plant
+-->
+
+<grid width="10" height="7" unitsizex="10" unitsizey="10">
+	<!--<unit x="9" y="4" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="9" y="3" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="9" y="2" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="9" y="1" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>-->
+	<unit x="8" y="5" level="4">
+		<surface type="Plains"></surface>
+		<structure name="Forest"></structure>
+		<!--<structure name=""></structure>-->
+	</unit>	
+	<unit x="8" y="4" level="4">
+		<surface type="Plains"></surface>
+		<structure name="Forest"></structure>
+		<!--<structure name=""></structure>-->
+	</unit>
+	<unit x="8" y="3" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="8" y="2" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="8" y="1" level="4">
+		<surface type="Plains"></surface>
+		<structure name="Forest"></structure>
+		<!--<structure name=""></structure>-->
+	</unit>
+	<unit x="7" y="5" level="3">
+		<surface type="Plains2"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="7" y="4" level="3">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="7" y="3" level="3">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="7" y="2" level="3">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="7" y="1" level="3">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="7" y="0" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="6" y="6" level="3">
+		<surface type="Hydro_River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="6" y="5" level="1">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="6" y="4" level="1">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="6" y="3" level="1">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="6" y="2" level="1">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="6" y="1" level="2">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="6" y="0" level="3">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="5" y="5" level="3">
+		<surface type="Hills"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="5" y="4" level="1">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="5" y="3" level="4">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="5" y="2" level="1">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="5" y="1" level="1">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="5" y="0" level="2">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<!--<unit x="4" y="6" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>-->
+	<unit x="4" y="5" level="3">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="4" y="4" level="1">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="4" y="3" level="1">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="4" y="2" level="1">
+		<surface type="Plains"></surface>
+		<structure name="City_Hall"></structure>
+	</unit>
+	<unit x="4" y="1" level="1">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="4" y="0" level="2">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<!--<unit x="3" y="6" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>-->
+	<unit x="3" y="5" level="3">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="3" y="4" level="2">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="3" y="3" level="1">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="3" y="2" level="4">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="3" y="1" level="1">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="3" y="0" level="2">
+		<surface type="Plains"></surface>
+		<structure name="Forest"></structure>
+		<!--<structure name=""></structure>-->
+	</unit>
+	<!--<unit x="2" y="6" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>-->
+	<unit x="2" y="5" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="2" y="4" level="2">
+		<surface type="Hills"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="2" y="3" level="2">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="2" y="2" level="1">
+		<surface type="River"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="2" y="1" level="2">
+		<surface type="Plains2"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="2" y="0" level="4">
+		<surface type="Plains"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="0" y="4" level="2">
+		<surface type="Ocean"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="0" y="2" level="2">
+		<surface type="Ocean"></surface>
+		<structure name=""></structure>
+	</unit>
+	<unit x="0" y="0" level="2">
+		<surface type="Ocean"></surface>
+		<structure name=""></structure>
+	</unit>
+</grid>

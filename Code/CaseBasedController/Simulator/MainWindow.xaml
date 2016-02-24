@@ -1,0 +1,40 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Simulator" x:Class="Simulator.MainWindow"
+        Title="Event Simulator" Height="350" Width="873" Closing="Window_Closing">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Label Content="Log file: " HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Margin="12,6,0,0"/>
+        <TextBox Height="23" TextWrapping="Wrap" Text="{Binding LogPath}" VerticalAlignment="Top" Margin="72,10,57,0" IsReadOnly="True"/>
+        <Button Content="Load" Margin="0,10,10,0" HorizontalAlignment="Right" Width="42" Height="23" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstEvents" Margin="12,82,10,10" ItemsSource="{Binding LogEvents}">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                    <EventSetter Event="MouseDoubleClick" Handler="EventsListItem_DoubleClickEvent"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <Label Content="DLLs:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Margin="12,34,0,0"/>
+        <TextBox Height="23" TextWrapping="Wrap" Text="{Binding DllsPath}" VerticalAlignment="Top" Margin="72,38,57,0" IsReadOnly="True"/>
+        <Button Content="Load" Margin="0,38,10,0" HorizontalAlignment="Right" Width="42" Height="23" VerticalAlignment="Top"/>
+        <TextBlock Margin="12,66,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Right">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ConnectedToThalamus}" Value="True">
+                            <Setter Property="Text" Value="Connected to thalamus"/>
+                            <Setter Property="Foreground" Value="Green"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ConnectedToThalamus}" Value="False">
+                            <Setter Property="Text" Value="NOT connected to thalamus"/>
+                            <Setter Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+    </Grid>
+</Window>

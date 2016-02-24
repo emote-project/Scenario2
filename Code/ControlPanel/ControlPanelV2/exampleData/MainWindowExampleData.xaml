@@ -1,0 +1,14 @@
+﻿<vm:StudentsDBViewModel
+    xmlns:vm="clr-namespace:ControlPanel.viewModels" 
+    xmlns:l="clr-namespace:EmoteEvents;assembly=EmoteEvents"
+    >
+
+    <vm:StudentsDBViewModel.Learners>
+        <l:LearnerInfo  firstName="Eugenio" middleName="Eux" lastName="Di Tullio" birth="20/01/1986" sex="M" />
+        <l:LearnerInfo  firstName="Patricia" middleName="Maria" lastName="Alvez Oliveira" birth="01/01/1988" sex="F" />
+    </vm:StudentsDBViewModel.Learners>
+    
+    
+
+
+</vm:StudentsDBViewModel>

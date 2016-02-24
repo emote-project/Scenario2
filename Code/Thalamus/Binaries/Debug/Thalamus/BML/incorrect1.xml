@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="incorrect1">
+	<face id="face1" start="1" end="2" lexime="incorrect1"></face>
+</bml>

@@ -1,0 +1,14 @@
+<bml id="NAO">
+	<face id="postureComplain" start="Nao0.headTouch"><lexeme lexeme="TouchComplain"/></face>
+	<speech id="dontTouchMe" start="postureComplain:start+0,5">
+		<text>Hey don't touch me!</text>
+	</speech>
+	<locomotion id="turnLeft" start="postureComplain:end" target="0.1 0 -1.57"/>
+	
+	<face id="postureLeaving" start="EMYS.dontTouchMeAnswer:end"><lexeme lexeme="Leaving"/></face>
+	<speech id="leaving" start="postureLeaving:start+0,5">
+		<text>No Problem. I'll be leaving now.</text>
+	</speech>
+	
+	<locomotion id="locoLeaving" start="postureLeaving:end" target="1"/>
+</bml>

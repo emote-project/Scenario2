@@ -1,0 +1,2 @@
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\EnercitiesEMOTE\ThalamusEnercities\bin\Debug\ThalamusEnercities.exe.config
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\ThalamusEnercities\bin\Debug\ThalamusEnercities.exe.config

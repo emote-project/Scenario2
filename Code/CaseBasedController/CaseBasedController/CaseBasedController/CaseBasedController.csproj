@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A085F0FA-A1D4-4B74-80DB-95A3D5729BA3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CaseBasedController</RootNamespace>
+    <AssemblyName>CaseBasedController</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\_GlobalBuild\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CaseBasedController.Programs.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\IM.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomUserControlWinForm">
+      <HintPath>..\..\CommonUtilities\ConsoleWindowWinForm\bin\Release\CustomUserControlWinForm.exe</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.6.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PS.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EnercitiesAI\dlls\PS.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AIGameActionPlayer.cs" />
+    <Compile Include="Behavior\BaseBehavior.cs" />
+    <Compile Include="Behavior\ClassifierControlBehavior.cs" />
+    <Compile Include="Behavior\EmptyBehaviour.cs" />
+    <Compile Include="Behavior\Enercities\BadTrickBehaviour.cs" />
+    <Compile Include="Behavior\Enercities\ExecuteGameAction.cs" />
+    <Compile Include="Behavior\Enercities\InteractiveTutorial\InteractiveTutorialUtterances.cs" />
+    <Compile Include="Behavior\Enercities\PerformTutorialSession1.cs" />
+    <Compile Include="Behavior\Enercities\PerformTutorial.cs" />
+    <Compile Include="Behavior\Enercities\PerformUtterance.cs" />
+    <Compile Include="Behavior\Enercities\PerformGameActionUtterance.cs" />
+    <Compile Include="Behavior\Enercities\PerformUtteranceForLatestMemoryEvent.cs" />
+    <Compile Include="Behavior\Enercities\PerformWrapupAndGoodbye.cs" />
+    <Compile Include="Behavior\Enercities\UpdateAIStrategies.cs" />
+    <Compile Include="Behavior\RandomBehavior.cs" />
+    <Compile Include="CasePool.cs" />
+    <Compile Include="Classifier\ClassifierController.cs" />
+    <Compile Include="Detection\Composition\Statistics\FeatureActivationDelayDetector.cs" />
+    <Compile Include="Detection\Composition\Statistics\FeatureActivationTimeDetector.cs" />
+    <Compile Include="Detection\Composition\Statistics\FeatureFrequencyDetector.cs" />
+    <Compile Include="Detection\Composition\Statistics\FeatureStatisticPropertyDetector.cs" />
+    <Compile Include="Detection\Composition\StayActiveDetector.cs" />
+    <Compile Include="Detection\Composition\WasActiveDetector.cs" />
+    <Compile Include="Detection\Enercities\AiPlannedActionForMayorBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\FirstActions\AfterFirstPolicyAppliedByMaiorBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\FirstActions\AfterFirstSkipDoneByMayorBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\FirstActions\AfterFirstUpgradeDoneByMayorBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\NewLevelMenuShowedBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\NewLevelReachedBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\SessionBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\TurnNumberBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\OKAO\GazeDetector.cs" />
+    <Compile Include="Detection\OKAO\SmileDetector.cs" />
+    <Compile Include="Detection\OKAO\FacialExpressionDetector.cs" />
+    <Compile Include="Detection\Enercities\CurrentLevelDetector.cs" />
+    <Compile Include="Detection\Enercities\ExploringMenuDetector.cs" />
+    <Compile Include="Detection\Enercities\GameEndedBinaryDetector.cs" />
+    <Compile Include="Detection\Enercities\GameStartedBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\LearnerModelEventInstantFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\ResourceAboveAverageDetector.cs" />
+    <Compile Include="Detection\Enercities\RobotSpeakingBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\HumanPlayerSpeakingBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\LastActionTypeDetector.cs" />
+    <Compile Include="Detection\Enercities\PerformUtteranceDetector.cs" />
+    <Compile Include="Detection\Enercities\RulesSaidDetector.cs" />
+    <Compile Include="Detection\Enercities\LevelBaseFeatureDetector.cs" />
+    <Compile Include="Detection\OKAO\OKAOFeatureDetector.cs" />
+    <Compile Include="EuxUtils.cs" />
+    <Compile Include="Forms\CasePoolViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CasePoolViewerForm.Designer.cs">
+      <DependentUpon>CasePoolViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClassifierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClassifierForm.Designer.cs">
+      <DependentUpon>ClassifierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmotionalClimateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmotionalClimateForm.Designer.cs">
+      <DependentUpon>EmotionalClimateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameInfo\Player.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MainController.cs" />
+    <Compile Include="Programs\CasePoolCodingProgram.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Simulation\FeaturesCollector.cs" />
+    <Compile Include="MyTimer.cs" />
+    <Compile Include="Detection\BinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Composition\HasFiredFeatureDetector.cs" />
+    <Compile Include="Detection\Composition\ReActivateFeatureDetector.cs" />
+    <Compile Include="Detection\Composition\Base\NotFeatureDetector.cs" />
+    <Compile Include="Detection\Composition\TimeBasedFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\AIActionPlannedDetector.cs" />
+    <Compile Include="Detection\Enercities\EarlyGameDetector.cs" />
+    <Compile Include="Detection\Enercities\EyebrowsDetector.cs" />
+    <Compile Include="Detection\Enercities\GameActionInstantFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\NewLevelInstantFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\PlayerInteractionBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\TurnChangedInstantFeatureDetector.cs" />
+    <Compile Include="Detection\InstantFeatureDetector.cs" />
+    <Compile Include="Detection\IntervalFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\PlayerTurnBinaryFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\KeywordDetector.cs" />
+    <Compile Include="Detection\Composition\FrequencyFeatureDetector.cs" />
+    <Compile Include="Detection\Composition\Base\WatcherFeatureDetector.cs" />
+    <Compile Include="Detection\Enercities\DelayFromTurnStartDetector.cs" />
+    <Compile Include="Example\ExampleBehavior.cs" />
+    <Compile Include="Example\ExampleFeatureDetector.cs" />
+    <Compile Include="Example\MessageBoxBehavior.cs" />
+    <Compile Include="Example\MinuteSecondDetector.cs" />
+    <Compile Include="GameInfo\GameStatus.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Thalamus\ControllerClient.cs" />
+    <Compile Include="Thalamus\ControllerPublisher.cs" />
+    <Compile Include="Thalamus\EventArgs.cs" />
+    <Compile Include="Example\PrintConsoleBehavior.cs" />
+    <Compile Include="Example\RandomFeatureDetector.cs" />
+    <Compile Include="Detection\IFeatureDetector.cs" />
+    <Compile Include="Detection\Composition\Base\OrFeatureDetector.cs" />
+    <Compile Include="Detection\Composition\Base\AndFeatureDetector.cs" />
+    <Compile Include="Behavior\CompositeBehavior.cs" />
+    <Compile Include="Case.cs" />
+    <Compile Include="Detection\Composition\Base\CompositeFeatureDetector.cs" />
+    <Compile Include="Behavior\IBehavior.cs" />
+    <Compile Include="Detection\BaseFeatureDetector.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programs\ExampleDetectionProgram.cs" />
+    <Compile Include="Programs\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Detection\ThresholdFeatureDetector.cs" />
+    <Compile Include="Thalamus\IAllPerceptionClient.cs" />
+    <Compile Include="GameInfo\TurnStatus.cs" />
+    <Compile Include="GameInfo\TranslatebleEnum.cs" />
+    <Compile Include="UserControls\CasePoolViewer.xaml.cs">
+      <DependentUpon>CasePoolViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Cases\CaseControl.xaml.cs">
+      <DependentUpon>CaseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Detectors\DetectorControl.xaml.cs">
+      <DependentUpon>DetectorControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Thalamus\Thalamus\Thalamus.csproj">
+      <Project>{8e97fcf9-93b2-4f56-b85f-10099d6d912f}</Project>
+      <Name>Thalamus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EmoteEvents\EmoteEvents.csproj">
+      <Project>{fb08405f-1f9b-4478-950e-fead4e1cf835}</Project>
+      <Name>EmoteEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Classification\Classification.csproj">
+      <Project>{002e2573-83d4-4152-8bdb-dfd0e8cfc638}</Project>
+      <Name>Classification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DetectorAnalyzer\DetectorAnalyzer.csproj">
+      <Project>{2875743d-670e-4774-ad35-a17beadd89b9}</Project>
+      <Name>DetectorAnalyzer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmotionalClimateClassification\EmotionalClimateClassification.csproj">
+      <Project>{6927f163-3a4b-4aac-b7c0-ab96b851d33a}</Project>
+      <Name>EmotionalClimateClassification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WekaWrapper\WekaWrapper.csproj">
+      <Project>{abb82bcd-9915-4caa-b786-47bb55789d3c}</Project>
+      <Name>WekaWrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Thalamus\ControllerClient.Perception.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\CasePoolViewerForm.resx">
+      <DependentUpon>CasePoolViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClassifierForm.resx">
+      <DependentUpon>ClassifierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmotionalClimateForm.resx">
+      <DependentUpon>EmotionalClimateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BehaviorsDictionary.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\clean-data.arff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ECdata.arff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\EnercitiesDemo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\EnercitiesDemoEmpathic.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\J48_1_1.model">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\MLPool.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\MultilayerPerceptron_1_1.model">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SMO_1_1.model">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\IM.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UserControls\CasePoolViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Cases\CaseControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Detectors\DetectorControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\Thalamus.dll.config
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\Thalamus.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\Thalamus.pdb
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\CookComputing.XmlRpcV2.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\GBML.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\MathNet.Iridium.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\GBML.pdb
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\de\MathNet.Iridium.resources.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\es\MathNet.Iridium.resources.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\bin\x86\Debug\fr\MathNet.Iridium.resources.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\obj\x86\Debug\Thalamus.csprojResolveAssemblyReference.cache
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\obj\x86\Debug\Thalamus.dll
+C:\Users\monstrengo\Documents\Thalamus\Thalamus\obj\x86\Debug\Thalamus.pdb

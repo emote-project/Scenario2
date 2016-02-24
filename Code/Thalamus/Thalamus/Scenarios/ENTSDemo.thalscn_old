@@ -1,0 +1,26 @@
+{
+	"Name":"ENTSDemo",
+	"Filename":null,
+	"Characters":[{
+		"Name":"ENTSDemo",
+		"Clients":[
+			{
+				"CommandLine":"..\\ThalamusSpeechClient\\ThalamusSpeechClient.exe",
+				"Arguments":"ENTSDemo "
+			},
+			{
+				"CommandLine":"..\\Skene\\Skene.exe",
+				"Arguments":"ENTSDemo "
+			},
+			{
+				"CommandLine":"..\\NuttyTracks\\Binaries\\NuttyTracksStandalone.exe",
+				"Arguments":" -start -n emys"
+			},
+			{
+				"CommandLine":"..\\Emys\\Emys.exe",
+				"Arguments":"7884"
+			}
+		]
+	}],
+	"IsNull":false
+}

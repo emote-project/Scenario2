@@ -1,0 +1,7 @@
+scenario.folder  = C:/Users/axj100/Documents/spring-workspace/EmoteMaps/scenario/
+nextTellDetails.folder  = C:/Users/axj100/Documents/spring-workspace/EmoteMaps/nextTellDetails/
+questionnaire.folder  = C:/Users/axj100/Documents/spring-workspace/EmoteMaps/questionnaire/ 
+symbol.folder = C:/Users/axj100/Documents/spring-workspace/EmoteMaps/src/main/webapp/resources/img/symbols/
+sound.file = C:/Users/axj100/Documents/spring-workspace/EmoteMaps/soundFile/countA.wav
+
+log.folder = C:/Emote/logs/OLMExp/

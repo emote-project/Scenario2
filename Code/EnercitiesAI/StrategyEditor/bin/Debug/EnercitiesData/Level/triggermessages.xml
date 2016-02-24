@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<messages>
+<event>
+	<message priority="3" repeattime="0" reference="victory_wildlife_reserve"></message>
+	<triggers>
+		<trigger type="VictoryPointsWildlifeReserve" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="victory_stadium"></message>
+	<triggers>
+		<trigger type="VictoryPointsStadium" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="victory_super_windmill"></message>
+	<triggers>
+		<trigger type="VictoryPointsSuperWind" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="victory_super_solar_plant"></message>
+	<triggers>
+		<trigger type="VictoryPointsSuperSolar" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="victory_nuclear_fusion_plant"></message>
+	<triggers>
+		<trigger type="VictoryPointsFusion" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="victory_wellbeing"></message>
+	<triggers>
+		<trigger type="VictoryPointsWellbeing" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="victory_environment"></message>
+	<triggers>
+		<trigger type="VictoryPointsEnvironment" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="2" repeattime="0" reference="first_victory_point_recieved"></message>
+	<triggers>
+		<trigger type="FirstVictoryPoints" timetillfiretrigger="1"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="victory_economy"></message>
+	<triggers>
+		<trigger type="VictoryPointsEconomy" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="drag_hydro_plant"></message>
+	<triggers>
+		<trigger type="DragHydro" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="drag_windmill"></message>
+	<triggers>
+		<trigger type="DragWindmillsLevel2" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="2" repeattime="0" reference="drag_river_powerplant"></message>
+	<triggers>
+		<trigger type="DragPowerPlantRiver" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="drag_first_powerplant"></message>
+	<triggers>
+		<trigger type="DragPowerPlant" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="60" reference="oil_depleted"></message>
+	<triggers>
+		<trigger type="OilDepleted" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="oil_low"></message>
+	<triggers>
+		<trigger type="OilLow" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="2" repeattime="0" reference="out_of_power"></message>
+	<triggers>
+		<trigger type="PowerDown" timetillfiretrigger="0"></trigger>
+		<trigger type="NoEnergyPlantBuild" timetillfiretrigger="10"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="wellbeing_low"></message>
+	<triggers>
+		<trigger type="WellbeingDeltaNegative" timetillfiretrigger="15"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="2" repeattime="0" reference="wellbeing_lower"></message>
+	<triggers>
+		<trigger type="WellbeingDeltaNegative" timetillfiretrigger="20"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="3" repeattime="0" reference="wellbeing_lowest"></message>
+	<triggers>
+		<trigger type="WellbeingDeltaNegative" timetillfiretrigger="30"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="economy_low"></message>
+	<triggers>
+		<trigger type="EconomyDeltaNegative" timetillfiretrigger="10"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="environment_low"></message>
+	<triggers>
+		<trigger type="EnvironmentDeltaNegative" timetillfiretrigger="10"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="levelup_ready"></message>
+	<triggers>
+		<trigger type="LevelUpReady" timetillfiretrigger="0"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="1" repeattime="0" reference="levelup_done"></message>
+	<triggers>
+		<trigger type="AfterLevelUp" timetillfiretrigger="1"></trigger>
+	</triggers>
+</event>
+<event>
+	<message priority="2" repeattime="0" reference="game_started"></message>
+	<triggers>
+		<trigger type="GameStart" timetillfiretrigger="3"></trigger>
+	</triggers>
+</event>
+</messages>

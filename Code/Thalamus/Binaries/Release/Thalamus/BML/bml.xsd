@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.2.746 (http://www.liquid-technologies.com)-->
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bml">
+    <xs:complexType>
+      <xs:complexContent mixed="false">
+        <xs:extension base="BehaviorBlock">
+          <xs:sequence maxOccurs="unbounded">
+            <xs:element name="required" type="BehaviorBlock" />
+            <xs:element name="constraint" type="Constraint" />
+          </xs:sequence>
+          <xs:attribute name="id" use="required" />
+          <xs:attribute default="&quot;&quot;" name="character" />
+          <xs:attribute default="MERGE" name="composition" />
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BehaviorBlock">
+    <xs:sequence maxOccurs="unbounded">
+	  
+      <xs:element name="face" type="Face" />
+      <xs:element name="faceLexeme" type="FaceLexeme" />
+      <xs:element name="faceFacs" type="FaceFacs" />
+      <xs:element name="faceShift" type="FaceShift" />
+      <xs:element name="gaze" type="Gaze" />
+      <xs:element name="gazeShift" type="GazeShift" />
+      <xs:element name="gesture" type="Gesture" />
+      <xs:element name="pointing" type="Pointing" />
+      <xs:element name="head" type="Head" />
+      <xs:element name="headDirectionShift" type="HeadDirectionShift" />
+      <xs:element name="locomotion" type="Locomotion" />
+      <xs:element name="posture" type="Posture" />
+      <xs:element name="postureShift" type="PostureShift" />
+      <xs:element name="speech" type="Speech" />
+	  <xs:element name="animation" type="Animation" />
+	  <xs:element name="sound" type="Sound" />
+      <xs:element name="wait" type="Wait" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActionBlock">
+    <xs:attribute name="id" use="required" />
+    <xs:attribute name="start" />
+    <xs:attribute name="end" />
+  </xs:complexType>
+  <xs:complexType name="Face">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FaceBase">
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element name="facs" type="FaceFacs" />
+          <xs:element name="lexeme" type="FaceLexeme" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FaceBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute default="1.0" name="amount" type="xs:float" />
+        <xs:attribute name="attackPeak" />
+        <xs:attribute name="relax" />
+        <xs:attribute name="overshoot" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FaceLexeme">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FaceBase">
+        <xs:attribute name="lexeme">
+          <xs:simpleType>
+            <xs:union memberTypes="LexemeFace xs:string" />
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FaceFacs">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FaceBase">
+        <xs:attribute name="au" type="xs:int" />
+        <xs:attribute name="side" type="FacsSide" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FaceShift">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Face" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GazeBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute name="target" />
+        <xs:attribute name="influence">
+          <xs:simpleType>
+            <xs:union memberTypes="GazeInfluence xs:string" />
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="offsetangle" type="xs:float" />
+        <xs:attribute name="offsetdirection" type="Direction" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Gaze">
+    <xs:complexContent mixed="false">
+      <xs:extension base="GazeBase">
+        <xs:attribute name="ready" />
+        <xs:attribute name="relax" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GazeShift">
+    <xs:complexContent mixed="false">
+      <xs:extension base="GazeBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Gesture">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute name="mode" type="BodyPart" />
+        <xs:attribute name="lexeme" type="LexemeGesture" />
+        <xs:attribute name="ready" />
+        <xs:attribute name="strokeStart" />
+        <xs:attribute name="stroke" />
+        <xs:attribute name="strokeEnd" />
+        <xs:attribute name="relax" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Pointing">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute name="mode" type="BodyPart" />
+        <xs:attribute name="target" />
+        <xs:attribute name="relax" />
+        <xs:attribute name="ready" />
+        <xs:attribute name="strokeStart" />
+        <xs:attribute name="stroke" />
+        <xs:attribute name="strokeEnd" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Head">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute name="relax" />
+        <xs:attribute name="ready" />
+        <xs:attribute name="strokeStart" />
+        <xs:attribute name="stroke" />
+        <xs:attribute name="strokeEnd" />
+        <xs:attribute name="lexeme" type="LexemeHead" />
+        <xs:attribute default="1" name="repetition" type="xs:int" />
+        <xs:attribute default="1" name="amount" type="xs:float" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="HeadDirectionShift">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute name="target" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Locomotion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute name="target" />
+        <xs:attribute default="WALK" name="manner" type="WalkType" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Posture">
+    <xs:complexContent mixed="false">
+      <xs:extension base="PostureBase">
+        <xs:attribute name="ready" />
+        <xs:attribute name="relax" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PostureShift">
+    <xs:complexContent mixed="false">
+      <xs:extension base="PostureBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PostureBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:sequence maxOccurs="unbounded">
+          <xs:element name="stance" type="Stance" />
+          <xs:element name="pose" type="Pose" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Stance">
+    <xs:attribute name="type" type="StanceType" />
+  </xs:complexType>
+  <xs:simpleType name="StanceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SITTING" />
+      <xs:enumeration value="CROUCHING" />
+      <xs:enumeration value="STANDING" />
+      <xs:enumeration value="LYING" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Pose">
+    <xs:attribute name="part" type="BodyPart" />
+    <xs:attribute name="lexeme" type="LexemePose" />
+  </xs:complexType>
+  <xs:simpleType name="LexemePose">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ARMS_AKIMBO" />
+      <xs:enumeration value="ARMS_CROSSED" />
+      <xs:enumeration value="ARMS_NEUTRAL" />
+      <xs:enumeration value="ARMS_OPEN" />
+      <xs:enumeration value="LEGS_CROSSED" />
+      <xs:enumeration value="LEGS_NEUTRAL" />
+      <xs:enumeration value="LEGS_OPEN" />
+      <xs:enumeration value="LEANING_FORWARD" />
+      <xs:enumeration value="LEANING_BACKWARD" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Speech">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+          <xs:element name="text" type="TextBlock" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Sound">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+        <xs:attribute name="SoundName" type="xs:string" />
+        <xs:attribute name="Mode" type="SoundPlayMode" />
+        <xs:attribute name="Volume" type="xs:float" />
+        <xs:attribute name="Pitch" type="xs:float" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Animation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock">
+		<xs:attribute name="Name" />
+        <xs:attribute name="Influence" type="AnimationInfluence" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+  <xs:complexType name="TextBlock" mixed="true">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="sync" type="Sync" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Wait">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ActionBlock" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Before">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="sync" type="Sync" />
+    </xs:sequence>
+    <xs:attribute name="ref" />
+  </xs:complexType>
+  <xs:complexType name="Synchronize">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="sync" type="Sync" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="After">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="sync" type="Sync" />
+    </xs:sequence>
+    <xs:attribute name="ref" />
+  </xs:complexType>
+  <xs:complexType name="Constraint">
+    <xs:sequence>
+      <xs:element name="synchronize" type="Synchronize" />
+      <xs:element name="after" type="After" />
+      <xs:element name="before" type="Before" />
+    </xs:sequence>
+    <xs:attribute name="id" />
+  </xs:complexType>
+  <xs:complexType name="Sync">
+    <xs:attribute name="id" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="LexemeFace">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OBLIQUE_BROWS" />
+      <xs:enumeration value="RAISE_BROWS" />
+      <xs:enumeration value="RAISE_LEFT_BROW" />
+      <xs:enumeration value="RAISE_RIGHT_BROW" />
+      <xs:enumeration value="LOWER_BROWS" />
+      <xs:enumeration value="LOWER_LEFT_BROW" />
+      <xs:enumeration value="LOWER_RIGHT_BROW" />
+      <xs:enumeration value="LOWER_MOUTH_CORNERS" />
+      <xs:enumeration value="LOWER_LEFT_MOUTH_CORNER" />
+      <xs:enumeration value="LOWER_RIGHT_MOUTH_CORNER" />
+      <xs:enumeration value="RAISE_MOUTH_CORNERS" />
+      <xs:enumeration value="RAISE_RIGHT_MOUTH_CORNER" />
+      <xs:enumeration value="RAISE_LEFT_MOUTH_CORNER" />
+      <xs:enumeration value="OPEN_MOUTH" />
+      <xs:enumeration value="OPEN_LIPS" />
+      <xs:enumeration value="WIDEN_EYES" />
+      <xs:enumeration value="CLOSE_EYES" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FacsSide">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LEFT" />
+      <xs:enumeration value="RIGHT" />
+      <xs:enumeration value="BOTH" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GazeInfluence">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EYES" />
+      <xs:enumeration value="HEAD" />
+      <xs:enumeration value="SHOULDER" />
+      <xs:enumeration value="WAIST" />
+      <xs:enumeration value="WHOLE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Direction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RIGHT" />
+      <xs:enumeration value="LEFT" />
+      <xs:enumeration value="UP" />
+      <xs:enumeration value="DOWN" />
+      <xs:enumeration value="UPRIGHT" />
+      <xs:enumeration value="UPLEFT" />
+      <xs:enumeration value="DOWNLEFT" />
+      <xs:enumeration value="DOWNRIGHT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BodyPart">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HAND" />
+      <xs:enumeration value="LEFT_HAND" />
+      <xs:enumeration value="RIGHT_HAND" />
+      <xs:enumeration value="BOTH_HANDS" />
+      <xs:enumeration value="HEAD" />
+      <xs:enumeration value="FOOT" />
+      <xs:enumeration value="RIGHT_FOOT" />
+      <xs:enumeration value="LEFT_FOOT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LexemeGesture">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BEAT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LexemeHead">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOD" />
+      <xs:enumeration value="SHAKE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WalkType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WALK" />
+      <xs:enumeration value="RUN" />
+      <xs:enumeration value="STRAFE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SoundPlayMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="REGULAR" />
+      <xs:enumeration value="LOOP" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AnimationInfluence">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RIGHTARM" />
+      <xs:enumeration value="LEFTARM" />
+	  <xs:enumeration value="BOTHARMS" />
+	  <xs:enumeration value="RIGHTLEG" />
+      <xs:enumeration value="LEFTLEG" />
+	  <xs:enumeration value="BOTHLEGS" />
+      <xs:enumeration value="FULLBODY" />
+	  <xs:enumeration value="HEAD" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

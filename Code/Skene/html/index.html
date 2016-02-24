@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>EMOTE Utterance Tester</title>
+		<style media="screen" type="text/css">
+		body {background-color:#9e2323;}
+		table {
+			background-color:#1a1a1a;
+			color:#ffffff;
+		}
+		
+		textarea {
+			width: 98%;
+		}
+		ul {
+			width:100%;
+			margin-bottom:20px;
+			overflow:hidden;
+		}
+
+		li {
+			float:left;
+			display:inline;
+		}
+		
+		.title div {
+			align: center;
+			font-size:250%
+		}
+		.double li  { width:50%; }
+		.quadruple li  { width:25%; }
+		
+		</style>
+		
+    </head>
+    
+    <body>
+	<div align="center">
+	<table width="80%" border=0>
+		<tr><td>
+			<form name="input" action="performUtterance" method="post">
+				<div align="center"><textarea type="text" name="utterance" rows="10" width="95%">#UTTERANCE#</textarea></div><br>
+				<div align="center"><input width="100" type="submit" value="Perform"></div>
+			</form>
+		</td></tr>
+		<tr><td><table border=0>
+			<td width="20%"></td>
+			<td align="left" width="10%"><b>Available Targets:</b></td>
+			<td align="left" width="70%"><ul class="quadruple">#TARGETS#</ul></td>
+		</table></td></tr>
+		<tr><td><table border=0>
+			<td width="20%"></td>
+			<td align="left" width="10%"><b>Available Instructions:</b></td>
+			<td align="left" width="70%"><ul class="double">#INSTRUCTIONS#</ul></td>
+		</table></td></tr>
+	</table>
+	</div>
+    </body>
+</html>

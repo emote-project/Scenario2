@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<penaltiesandbonusses>
+	<!--
+		surface - structure combobonus example
+	-->
+	<combobonusses>
+		<combobonus>
+			<structure type="Windmills"/>
+			<surface type="Hills" />
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>2</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</combobonus>
+		<combobonus>
+			<structure type="Windmills"/>
+			<surface type="Ocean"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>2</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</combobonus>
+	</combobonusses>
+	<!--
+        Grid Next To surface penalty bonus example
+	-->
+	<gridnexttosurface>
+		<penaltybonus>
+			<structurecategory type="Environment"/>
+			<surface type="River"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>1</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Economy"/>
+			<surface type="River"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0,5</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<surface type="River"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0,5</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Environment"/>
+			<surface type="Ocean"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0,5</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Economy"/>
+			<surface type="Ocean"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>1</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<surface type="Ocean"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0,5</economyscore>
+				<wellbeingscore>0,5</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+	</gridnexttosurface>
+	<!--
+		Grid Next To structure penalty bonus example
+	-->
+	<gridnexttostructure>
+		<penaltybonus>
+			<structurecategory type="Environment"/>
+			<structure type="Forest"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>1</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Environment"/>
+			<structure type="Wildlife_Reserve"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>2</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Windmills"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>-0,5</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Nuclear_Plant"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>-5</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Coal_Plant"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>-3</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Nuclear_Fusion"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>-3</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Heavy_Industry"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>-3</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Light_Industry"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Commercial"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>-1</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Public_Services"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>1</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Market"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0,5</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>		
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Stadium"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>-1</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Park"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>1</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+				<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Forest"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0,5</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+		<penaltybonus>
+			<structurecategory type="Residential"/>
+			<structure type="Wildlife_Reserve"/>
+			<bonus>
+				<annualcost>0</annualcost>
+				<annualenergy>0</annualenergy>
+				<annualoil>0</annualoil>
+				<environmentscore>0</environmentscore>
+				<economyscore>0</economyscore>
+				<wellbeingscore>0,5</wellbeingscore>
+				<homes>0</homes>
+			</bonus>
+		</penaltybonus>
+	</gridnexttostructure>
+</penaltiesandbonusses>

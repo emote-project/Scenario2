@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario>
+	<startvalues>
+		<population>0</population>
+		<yearsInGame>150</yearsInGame>
+		<cash>100</cash>
+		<economyScore>0</economyScore>
+		<environmentScore>0</environmentScore>
+		<wellbeingScore>0</wellbeingScore>
+		<taxPerPerson>0</taxPerPerson>
+		<oil>1800</oil>
+		<startyear>2013</startyear>
+	</startvalues>
+	<winconditions>
+		<condition level='1'>
+			<population>15</population>
+			<sustainablecity>false</sustainablecity>
+			<partime>10</partime>
+		</condition>
+		<condition level='2'>
+			<population>45</population>
+			<sustainablecity>false</sustainablecity>
+			<partime>20</partime>
+		</condition>
+		<condition level='3'>
+			<population>100</population>
+			<sustainablecity>false</sustainablecity>
+			<partime>40</partime>
+		</condition>
+		<condition level='4'>
+			<population>200</population>
+			<sustainablecity>true</sustainablecity>
+			<partime>70</partime>
+		</condition>
+	</winconditions>
+</scenario>

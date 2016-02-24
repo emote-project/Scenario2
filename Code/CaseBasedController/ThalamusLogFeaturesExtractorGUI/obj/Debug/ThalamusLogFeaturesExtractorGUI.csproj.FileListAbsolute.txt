@@ -1,0 +1,8 @@
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\ThalamusLogFeaturesExtractorGUI.csprojResolveAssemblyReference.cache
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\styleandicons.baml
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\App.baml
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\MainWindow.g.cs
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\App.g.cs
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\ThalamusLogFeaturesExtractorGUI_MarkupCompile.cache
+C:\Users\Filipa Correia\Desktop\EMOTE-FILIPA\Code\CaseBasedController\ThalamusLogFeaturesExtractorGUI\obj\Debug\ThalamusLogFeaturesExtractorGUI_MarkupCompile.lref

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThalamusSpeechClient", "ThalamusSpeechClient.csproj", "{098E4228-A307-4AAA-B840-A56D9B48893B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThalamusMacSpeechClient", "ThalamusMacSpeechClient\ThalamusMacSpeechClient.csproj", "{2F946183-9164-4AC2-BAC5-F88F298CF8D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug (OSX)|Any CPU = Debug (OSX)|Any CPU
+		Debug (OSX)|x86 = Debug (OSX)|x86
+		Debug (Win)|Any CPU = Debug (Win)|Any CPU
+		Debug (Win)|x86 = Debug (Win)|x86
+		Release (OSX)|Any CPU = Release (OSX)|Any CPU
+		Release (OSX)|x86 = Release (OSX)|x86
+		Release (Win)|Any CPU = Release (Win)|Any CPU
+		Release (Win)|x86 = Release (Win)|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (OSX)|Any CPU.ActiveCfg = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (OSX)|Any CPU.Build.0 = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (OSX)|x86.ActiveCfg = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (OSX)|x86.Build.0 = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (Win)|Any CPU.ActiveCfg = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (Win)|Any CPU.Build.0 = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (Win)|x86.ActiveCfg = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Debug (Win)|x86.Build.0 = Debug (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (OSX)|Any CPU.ActiveCfg = Release (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (OSX)|Any CPU.Build.0 = Release (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (OSX)|x86.ActiveCfg = Release (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (OSX)|x86.Build.0 = Release (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (Win)|Any CPU.ActiveCfg = Release (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (Win)|Any CPU.Build.0 = Release (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (Win)|x86.ActiveCfg = Release (Win)|x86
+		{098E4228-A307-4AAA-B840-A56D9B48893B}.Release (Win)|x86.Build.0 = Release (Win)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Debug (OSX)|Any CPU.ActiveCfg = Debug (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Debug (OSX)|x86.ActiveCfg = Debug (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Debug (OSX)|x86.Build.0 = Debug (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Debug (Win)|Any CPU.ActiveCfg = Debug (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Debug (Win)|x86.ActiveCfg = Debug (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Release (OSX)|Any CPU.ActiveCfg = Release (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Release (OSX)|Any CPU.Build.0 = Release (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Release (OSX)|x86.ActiveCfg = Release (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Release (OSX)|x86.Build.0 = Release (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Release (Win)|Any CPU.ActiveCfg = Release (OSX)|x86
+		{2F946183-9164-4AC2-BAC5-F88F298CF8D7}.Release (Win)|x86.ActiveCfg = Release (OSX)|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ThalamusMacSpeechClient\ThalamusMacSpeechClient.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+syntax: regexp
+.userprefs
+.pidb
+.pdb
+.exe
+.exe.manifest
+.suo
+.cache
+.rar
+.log
+.off
+.dll
+.docx
+.licenseheader
+.DS_Store
+obj/
+Unversioned/
+
+syntax: glob
+Logs/*
+*/Debug
+*/Release
+

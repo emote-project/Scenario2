@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="mp3tB">
+	<speech id="mp3tB2" start="mp3tA.mp3tA1:end"><text>Meeny.</text></speech>
+	<speech id="mp3tB5" start="mp3tA.mp3tA4:end"><text>Catch a</text></speech>
+	<speech id="mp3tB8" start="mp3tA.mp3tA7:end"><text>Toe.</text></speech>
+	<speech id="mp3tB11" start="mp3tA.mp3tA10:end"><text>Let him.</text></speech>
+	<speech id="mp3tB14" start="mp3tA.mp3tA13:end"><text>Meeny.</text></speech>
+	<speech id="mp3tB17" start="mp3tA.mp3tA16:end"><text>Moe.</text></speech>
+</bml>

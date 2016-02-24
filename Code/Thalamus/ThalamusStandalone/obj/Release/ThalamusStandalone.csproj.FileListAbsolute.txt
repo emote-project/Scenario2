@@ -1,0 +1,15 @@
+C:\Users\monstrengo\Desktop\Development\Thalamus\Binaries\Release\ThalamusStandalone.exe.config
+C:\Users\monstrengo\Desktop\Development\Thalamus\Binaries\Release\ThalamusStandalone.exe
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.csprojResolveAssemblyReference.cache
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\GraphSharpControl.g.cs
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone_MarkupCompile.cache
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone_MarkupCompile.lref
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\GraphSharpControl.baml
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.g.resources
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\Thalamus.frmConflictResolution.resources
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\Thalamus.frmLog.resources
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\Thalamus.frmThalamus.resources
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\Thalamus.Properties.Resources.resources
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.csproj.GenerateResource.Cache
+C:\Users\monstrengo\Desktop\Development\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.exe

@@ -1,0 +1,6 @@
+C:\Users\monstrengo\Desktop\Development\Thalamus\Binaries\Release\Thalamus.dll.config
+C:\Users\monstrengo\Desktop\Development\Thalamus\Binaries\Release\Thalamus.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\Binaries\Release\Thalamus.pdb
+C:\Users\monstrengo\Desktop\Development\Thalamus\Thalamus\obj\Release\Thalamus.csprojResolveAssemblyReference.cache
+C:\Users\monstrengo\Desktop\Development\Thalamus\Thalamus\obj\Release\Thalamus.dll
+C:\Users\monstrengo\Desktop\Development\Thalamus\Thalamus\obj\Release\Thalamus.pdb

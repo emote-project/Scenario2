@@ -1,0 +1,7 @@
+D:\NAOBridges\NAORemote\bin\Release\NAORemote.dll
+D:\NAOBridges\NAORemote\bin\Release\NAORemote.pdb
+D:\NAOBridges\NAORemote\bin\Release\Renci.SshNet.dll
+D:\NAOBridges\NAORemote\bin\Release\Renci.SshNet.xml
+D:\NAOBridges\NAORemote\obj\Release\NAORemote.csprojResolveAssemblyReference.cache
+D:\NAOBridges\NAORemote\obj\Release\NAORemote.dll
+D:\NAOBridges\NAORemote\obj\Release\NAORemote.pdb

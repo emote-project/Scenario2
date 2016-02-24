@@ -1,0 +1,16 @@
+D:\Thalamus\ThalamusClientGUI\bin\Release\ThalamusClientGUI.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\ThalamusClientGUI.pdb
+D:\Thalamus\ThalamusClientGUI\bin\Release\Thalamus.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\CookComputing.XmlRpcV2.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\GBML.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\MathNet.Iridium.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\Newtonsoft.Json.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\Thalamus.pdb
+D:\Thalamus\ThalamusClientGUI\bin\Release\GBML.pdb
+D:\Thalamus\ThalamusClientGUI\bin\Release\Newtonsoft.Json.xml
+D:\Thalamus\ThalamusClientGUI\bin\Release\de\MathNet.Iridium.resources.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\es\MathNet.Iridium.resources.dll
+D:\Thalamus\ThalamusClientGUI\bin\Release\fr\MathNet.Iridium.resources.dll
+D:\Thalamus\ThalamusClientGUI\obj\Release\ThalamusClientGUI.csprojResolveAssemblyReference.cache
+D:\Thalamus\ThalamusClientGUI\obj\Release\ThalamusClientGUI.dll
+D:\Thalamus\ThalamusClientGUI\obj\Release\ThalamusClientGUI.pdb

@@ -1,0 +1,17 @@
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\ThalamusSpeechClient.exe.config
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\ThalamusSpeechClient.exe
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\ThalamusSpeechClient.pdb
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\Thalamus.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\CookComputing.XmlRpcV2.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\GBML.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\MathNet.Iridium.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\Newtonsoft.Json.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\Thalamus.pdb
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\GBML.pdb
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\Newtonsoft.Json.xml
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\de\MathNet.Iridium.resources.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\es\MathNet.Iridium.resources.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\bin\Debug\fr\MathNet.Iridium.resources.dll
+D:\Thalamus\Example Modules\ThalamusSpeechClient\obj\x86\Debug (Win)\ThalamusSpeechClient.csprojResolveAssemblyReference.cache
+D:\Thalamus\Example Modules\ThalamusSpeechClient\obj\x86\Debug (Win)\ThalamusSpeechClient.exe
+D:\Thalamus\Example Modules\ThalamusSpeechClient\obj\x86\Debug (Win)\ThalamusSpeechClient.pdb

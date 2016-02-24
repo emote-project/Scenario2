@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="joana" character="NAO">
+
+	<sound id="s1" start="1" soundname="d:\how_you_doing.wav"></sound>
+
+	<speech id="apresentacao" start="comeca" timeout="3">
+		<text>Hello, I am NAO.</text>
+	</speech>
+	
+	<timeout id="t2" start="apresentacao:end" end="apresentacao:start+20" event="comeca" cancel="cancelTimeout1"/>
+	
+	
+	<face id="gesto" start="apresentacao:end+2"><lexeme lexeme="Disgust2"/></face>
+	
+	
+	
+	<speech id="speech2" start="imitou">
+		<text>Boa mike.</text>
+	</speech>
+	
+</bml>

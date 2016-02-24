@@ -1,0 +1,15 @@
+D:\NAOBridges\SshUserControl\SshShellControl\bin\Release\SshShellControl.dll
+D:\NAOBridges\SshUserControl\SshShellControl\bin\Release\SshShellControl.pdb
+D:\NAOBridges\SshUserControl\SshShellControl\bin\Release\SshShell.exe
+D:\NAOBridges\SshUserControl\SshShellControl\bin\Release\Renci.SshNet.dll
+D:\NAOBridges\SshUserControl\SshShellControl\bin\Release\SshShell.pdb
+D:\NAOBridges\SshUserControl\SshShellControl\bin\Release\Renci.SshNet.xml
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.csprojResolveAssemblyReference.cache
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.baml
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.g.cs
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl_MarkupCompile.cache
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.g.resources
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.Properties.Resources.resources
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.csproj.GenerateResource.Cache
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.dll
+D:\NAOBridges\SshUserControl\SshShellControl\obj\Release\SshShellControl.pdb

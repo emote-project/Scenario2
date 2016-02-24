@@ -1,0 +1,13 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MySshShellGuiTest.ShellWindow" xmlns:SshShell="clr-namespace:SshShellControl;assembly=SshShell" xmlns:SshShellControl="clr-namespace:SshShellControl;assembly=SshShellControl" x:Class="MySshShellGuiTest.ShellWindow.ShellWindow"
+        Title="MainWindow" Height="359" Width="525">
+    <Grid>
+        <TextBox x:Name="txtCommand" Height="21" Margin="10,0,90,10" TextWrapping="Wrap" VerticalAlignment="Bottom" KeyDown="txtCommand_KeyDown" />
+        <Button Content="Send" HorizontalAlignment="Right" Margin="0,0,10,11" VerticalAlignment="Bottom" Width="75" Click="Button_Click" />
+
+        <SshShellControl:SshShellControl x:Name="shell" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="282" Width="497"/>
+
+    </Grid>
+</Window>

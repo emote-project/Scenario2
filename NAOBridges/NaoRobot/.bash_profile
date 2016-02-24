@@ -1,0 +1,1 @@
+export PATH=$PATH:~/local/bin:~/local/lib/mono/4.5:/usr/lib/naoqi

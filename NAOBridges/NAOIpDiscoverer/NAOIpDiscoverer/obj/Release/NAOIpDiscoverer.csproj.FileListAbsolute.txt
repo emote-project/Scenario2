@@ -1,0 +1,7 @@
+D:\NAOBridges\NAOIpDiscoverer\NAOIpDiscoverer\bin\Release\NAOIpDiscoverer.exe
+D:\NAOBridges\NAOIpDiscoverer\NAOIpDiscoverer\bin\Release\NAOIpDiscoverer.pdb
+D:\NAOBridges\NAOIpDiscoverer\NAOIpDiscoverer\bin\Release\Zeroconf.dll
+D:\NAOBridges\NAOIpDiscoverer\NAOIpDiscoverer\bin\Release\Zeroconf.xml
+D:\NAOBridges\NAOIpDiscoverer\NAOIpDiscoverer\obj\Release\NAOIpDiscoverer.csprojResolveAssemblyReference.cache
+D:\NAOBridges\NAOIpDiscoverer\NAOIpDiscoverer\obj\Release\NAOIpDiscoverer.exe
+D:\NAOBridges\NAOIpDiscoverer\NAOIpDiscoverer\obj\Release\NAOIpDiscoverer.pdb

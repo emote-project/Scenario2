@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bml id="teste">
+	<animation id="anim1" start="0" end ="3" Name="nome1"></animation>
+	<face id="face1" start="1" end="2" lexeme="suspense1"></face>
+	<sound id="sound1" start="1" end="2" SoundName="soundcouiso.mp3"></sound>
+</bml>

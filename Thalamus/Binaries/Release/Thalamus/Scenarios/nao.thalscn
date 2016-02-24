@@ -1,0 +1,5 @@
+{"Name":"nao","Filename":null,"Characters":[{"Name":"nao",
+"Clients":[
+{"CommandLine":"D:\\Projects\\NAOBridges\\NAOThalamusStandalone\\bin\\Debug\\NAOThalamusStandalone.exe","Arguments":"Handy.local "},
+{"CommandLine":"D:\\Projects\\Thalamus\\ThalamusMindDemo\\bin\\Debug\\ThalamusMindDemo.exe","Arguments":""},
+{"CommandLine":"D:\\Projects\\Thalamus\\ThalamusSpeechServer\\bin\\Debug\\ThalamusSpeechClient.exe","Arguments":""}]}],"IsNull":false}

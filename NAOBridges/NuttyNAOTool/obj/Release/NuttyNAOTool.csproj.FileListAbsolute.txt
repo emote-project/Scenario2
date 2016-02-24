@@ -1,0 +1,8 @@
+D:\NAOBridges\NuttyNAOTool\bin\Release\NuttyNAOTool.exe.config
+D:\NAOBridges\NuttyNAOTool\bin\Release\NuttyNAOTool.exe
+D:\NAOBridges\NuttyNAOTool\bin\Release\NuttyNAOTool.pdb
+D:\NAOBridges\NuttyNAOTool\bin\Release\NuttyTracks.dll
+D:\NAOBridges\NuttyNAOTool\bin\Release\RiverFlow.dll
+D:\NAOBridges\NuttyNAOTool\obj\Release\NuttyNAOTool.csprojResolveAssemblyReference.cache
+D:\NAOBridges\NuttyNAOTool\obj\Release\NuttyNAOTool.exe
+D:\NAOBridges\NuttyNAOTool\obj\Release\NuttyNAOTool.pdb

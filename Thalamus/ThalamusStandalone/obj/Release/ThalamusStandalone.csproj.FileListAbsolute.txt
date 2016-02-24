@@ -1,0 +1,16 @@
+D:\Thalamus\Binaries\Release\ThalamusStandalone.exe.config
+D:\Thalamus\Binaries\Release\ThalamusStandalone.exe
+D:\Thalamus\Binaries\Release\ThalamusStandalone.pdb
+D:\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.csprojResolveAssemblyReference.cache
+D:\Thalamus\ThalamusStandalone\obj\Release\GraphSharpControl.g.cs
+D:\Thalamus\ThalamusStandalone\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone_MarkupCompile.cache
+D:\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone_MarkupCompile.lref
+D:\Thalamus\ThalamusStandalone\obj\Release\GraphSharpControl.baml
+D:\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.g.resources
+D:\Thalamus\ThalamusStandalone\obj\Release\Thalamus.frmConflictResolution.resources
+D:\Thalamus\ThalamusStandalone\obj\Release\Thalamus.frmThalamus.resources
+D:\Thalamus\ThalamusStandalone\obj\Release\Thalamus.Properties.Resources.resources
+D:\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.csproj.GenerateResource.Cache
+D:\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.exe
+D:\Thalamus\ThalamusStandalone\obj\Release\ThalamusStandalone.pdb

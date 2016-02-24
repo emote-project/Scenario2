@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Thalamus.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UniqueLogFile" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LogDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Logs\</Value>
+    </Setting>
+    <Setting Name="PlanFPS" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="BmlSchema" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bml.xsd</Value>
+    </Setting>
+    <Setting Name="BmlDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thalamus\BML\</Value>
+    </Setting>
+    <Setting Name="AutoAwake" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ScenariosDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Thalamus\Scenarios\</Value>
+    </Setting>
+    <Setting Name="BeaconInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="BroadcastPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9050</Value>
+    </Setting>
+    <Setting Name="CharacterStartPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+    <Setting Name="TrackingDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">thalamus.trackingdb</Value>
+    </Setting>
+    <Setting Name="PingInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="ConflictRulesFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MulticastAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">239.255.27.29</Value>
+    </Setting>
+    <Setting Name="MulticastTTL" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SelectedNetworkDevice" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ProcessMultipleSimultaneousRequests" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FastTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="SlowTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

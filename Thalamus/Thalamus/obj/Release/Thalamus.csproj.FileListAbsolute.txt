@@ -1,0 +1,6 @@
+D:\Thalamus\Binaries\Release\Thalamus.dll.config
+D:\Thalamus\Binaries\Release\Thalamus.dll
+D:\Thalamus\Binaries\Release\Thalamus.pdb
+D:\Thalamus\Thalamus\obj\Release\Thalamus.csprojResolveAssemblyReference.cache
+D:\Thalamus\Thalamus\obj\Release\Thalamus.dll
+D:\Thalamus\Thalamus\obj\Release\Thalamus.pdb

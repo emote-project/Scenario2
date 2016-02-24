@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E97FCF9-93B2-4F56-B85F-10099D6D912F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thalamus</RootNamespace>
+    <AssemblyName>Thalamus</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Binaries\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>lib\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="GBML, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7751164f81eae60c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GBML\obj\Release\GBML.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="MathNet.Iridium">
+      <HintPath>lib\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\Animation.cs" />
+    <Compile Include="Actions\FaceBase.cs" />
+    <Compile Include="Actions\Sound.cs" />
+    <Compile Include="Actions\SyncAction.cs" />
+    <Compile Include="Actions\SyncPoint.cs" />
+    <Compile Include="BehaviorNodes\Action.cs" />
+    <Compile Include="Actions\Face.cs" />
+    <Compile Include="Actions\FaceFacs.cs" />
+    <Compile Include="Actions\FaceLexeme.cs" />
+    <Compile Include="Actions\FaceShift.cs" />
+    <Compile Include="Actions\Gaze.cs" />
+    <Compile Include="Actions\GazeShift.cs" />
+    <Compile Include="Actions\Gesture.cs" />
+    <Compile Include="Actions\Head.cs" />
+    <Compile Include="Actions\HeadShift.cs" />
+    <Compile Include="Actions\Locomotion.cs" />
+    <Compile Include="Actions\Pointing.cs" />
+    <Compile Include="Actions\Posture.cs" />
+    <Compile Include="Actions\PostureShift.cs" />
+    <Compile Include="Actions\Speech.cs" />
+    <Compile Include="Behavior\Behavior.cs" />
+    <Compile Include="Behavior\BehaviorNode.cs" />
+    <Compile Include="Behavior\BehaviorPlan.cs" />
+    <Compile Include="BehaviorNodes\Required.cs" />
+    <Compile Include="Actions\Wait.cs" />
+    <Compile Include="Clients\ThalamusBMLInterfaces.cs" />
+    <Compile Include="Conflicts\ConflictManager.cs" />
+    <Compile Include="Conflicts\ConflictRule.cs" />
+    <Compile Include="Conflicts\ConflictSettings.cs" />
+    <Compile Include="LogEntry.cs" />
+    <Compile Include="Scenario.cs" />
+    <Compile Include="Character\SyncEvents.cs" />
+    <Compile Include="Character\Character.cs" />
+    <Compile Include="Constraint\After.cs" />
+    <Compile Include="Constraint\Before.cs" />
+    <Compile Include="Constraint\Constraint.cs" />
+    <Compile Include="Constraint\Synchronize.cs" />
+    <Compile Include="Feedback\BlockProgress.cs" />
+    <Compile Include="Feedback\Feedback.cs" />
+    <Compile Include="Feedback\PredictionFeedback.cs" />
+    <Compile Include="Feedback\SyncPointProgress.cs" />
+    <Compile Include="Feedback\WarningFeedback.cs" />
+    <Compile Include="ThalamusEnvironment.cs" />
+    <Compile Include="Behavior\BehaviorManager.cs" />
+    <Compile Include="Character\Manager.cs" />
+    <Compile Include="Character\ThalamusEvent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Behavior\BehaviorExecutionContext.cs" />
+    <Compile Include="Actions\Enums.cs" />
+    <Compile Include="Tracking\Tracker.cs" />
+    <Compile Include="Tracking\TrackingManager.cs" />
+    <Compile Include="Clients\ClientsInterface.cs" />
+    <Compile Include="Clients\IThalamusClient.cs" />
+    <Compile Include="Clients\IThalamusClientRpc.cs" />
+    <Compile Include="Clients\IThalamusServer.cs" />
+    <Compile Include="Clients\IThalamusServerRpc.cs" />
+    <Compile Include="Clients\ThalamusClient.cs" />
+    <Compile Include="Clients\ThalamusClientProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clients\ThalamusClientService.cs" />
+    <Compile Include="Clients\DataTypes.cs" />
+    <Compile Include="Clients\ThalamusServerService.cs" />
+    <Compile Include="Clients\ThalamusPublisher.cs" />
+    <Compile Include="Clients\IAction.cs" />
+    <Compile Include="Clients\IPerception.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Thalamus.licenseheader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

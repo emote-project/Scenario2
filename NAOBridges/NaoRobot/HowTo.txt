@@ -1,0 +1,37 @@
+To install and compile all the packages to run NaoBridges please follow the next steps:
+
+1. Clone the Thalamus repository (http://hg.code.sf.net/p/thalamus/code) to a folder following this structure: *mainfolder*\Thalamus. The *mainfolder* will contain all the other cloned repositories that will be need.
+2. Open the Thalamus project and compile it in the Release version.
+3. Clone the EMOTE-Modules-WIP repository in a folder inside the *mainfolder* like it was done for Thalamus
+4. Open the EMOTE-Modules-WIP/ExternalTTS project and verify that all the references to thalamus are still valid. In case they are not, please restore them manually, than compile it as Release.
+5. Clone the NAOBridges repository in a folder inside the *mainfolder* like it was done for the other repositories.
+6. Open the NAOBridges solution and verify that all the libraries references are still valid. In case they're not, please restore them. There is a "libs" folder inside the NAOThalamusSharp project's folder with the libraries that may have lost the reference. If having problem compiling the "NuttyNAO" project, it can be temporary unloaded.
+
+Robot:
+1. Copy inside NAO's home folder the three files under NAOBridges/NaoRobot: .bash_profile, install.sh and MonoNAO.tar
+2. Execute the install.sh script from the robot command line. This will install mono in the NAO's system. 
+3. Create a new folder in home/nao/ called NAOThalamus and copy inside it all the content inside these following folder from the NAOBridges solution:
+- \NAOBridges\NAOThalamusSharp\bin\Release\*.*
+- \NAOBridges\NAOThalamus\*.*
+
+Execution:
+To execute the NAO thalamus and NAO python code it will be needed to execute the following commands on the NAO's command line:
+- python NAOThalamus/naoquiXmlrpc.py
+- mono NAOThalamus/NAOThalamusMono.exe
+
+Installing Idle behavior
+For the system to work properly, the idle.crg behavior needs to be installed into the robot. To do so open the behavior doubleclicking on it. This will open choreograph (https://community.aldebaran-robotics.com/resources/). From Choreograph, upload the behavior to the robot without changing the behavior's name which must be "idle".
+
+
+
+
+
+
+================== Thrubleshooting ========================================
+
+- install.sh not working
+just execute "tar -xf MonoNAO.tar" from /home/nao/ folder
+
+- can't execute mono even if it is well installed in /home/nao/local/bin 
+From any location execute the following command: 
+chmod -R +x /home/nao/local/bin

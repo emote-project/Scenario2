@@ -1,0 +1,8 @@
+D:\NAOBridges\SshUserControl\SshShell\bin\Release\SshShell.exe.config
+D:\NAOBridges\SshUserControl\SshShell\bin\Release\SshShell.exe
+D:\NAOBridges\SshUserControl\SshShell\bin\Release\SshShell.pdb
+D:\NAOBridges\SshUserControl\SshShell\bin\Release\Renci.SshNet.dll
+D:\NAOBridges\SshUserControl\SshShell\bin\Release\Renci.SshNet.xml
+D:\NAOBridges\SshUserControl\SshShell\obj\Release\SshShell.csprojResolveAssemblyReference.cache
+D:\NAOBridges\SshUserControl\SshShell\obj\Release\SshShell.exe
+D:\NAOBridges\SshUserControl\SshShell\obj\Release\SshShell.pdb

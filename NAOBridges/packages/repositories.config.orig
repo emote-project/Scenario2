@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\..\EMOTE-Modules-WIP\NAOIpDiscoverer\NAOIpDiscoverer\packages.config" />
+  <repository path="..\NAORemote\packages.config" />
+  <repository path="..\NAOThalamusGUI\packages.config" />
+  <repository path="..\NAOThalamusSharp\packages.config" />
+  <repository path="..\NuttyNAO\packages.config" />
+</repositories>

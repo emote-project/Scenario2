@@ -1,0 +1,2 @@
+#!/sbin/runscript
+tar -xf MonoNAO.tar

@@ -1,0 +1,28 @@
+syntax: regexp
+.userprefs
+.pidb
+.pdb
+.exe
+.exe.manifest
+.suo
+.cache
+.rar
+.log
+.off
+.dll
+.pyc
+.zip
+.orig
+obj/
+
+syntax: glob
+Logs/*
+NaoRobot/*
+*/Debug
+*/Release
+*/Binaries
+_UpgradeReport*
+*DS_Store
+UpgradeLog.htm
+UpgradeLog.XML
+bin/

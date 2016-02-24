@@ -1,0 +1,58 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:EuxUserControls="clr-namespace:EuxUserControls;assembly=EuxUserControls" xmlns:local="clr-namespace:ThalamusLogPlayer" x:Class="ThalamusLogPlayer.MainWindow"
+        Title="MainWindow" Height="94" MinHeight="115" Width="469" Closed="Window_Closed">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <TextBox Height="21" Margin="11,38,170,0" TextWrapping="Wrap" Text="{Binding LogPath}" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="cmdLoad" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,38,90,0" Click="cmdLoad_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Content" Value="Load Log"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsLogLoading}" Value="True">
+                            <Setter Property="Content" Value="Loading"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        
+        <EuxUserControls:ThalamusConnectionStatusControl x:Name="ThalamusStatusControl" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="cmdPlay" IsEnabled="{Binding CanPlay}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,38,10,0" Click="cmdPlay_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Content" Value="Play Log"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsPlaying}" Value="True">
+                            <Setter Property="Content" Value="Playing.."/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <ProgressBar Value="{Binding Progress}" Margin="0,0,0,5" Height="5" VerticalAlignment="Bottom" >
+            <ProgressBar.Style>
+                <Style TargetType="ProgressBar">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsLogLoading}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="IsIndeterminate" Value="True"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsPlaying}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="IsIndeterminate" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ProgressBar.Style>
+        </ProgressBar>
+        
+    </Grid>
+</Window>

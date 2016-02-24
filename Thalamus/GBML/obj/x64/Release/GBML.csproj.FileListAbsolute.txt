@@ -1,0 +1,5 @@
+D:\Thalamus\GBML\bin\x64\Release\GBML.dll
+D:\Thalamus\GBML\bin\x64\Release\GBML.pdb
+D:\Thalamus\GBML\obj\x64\Release\GBML.csprojResolveAssemblyReference.cache
+D:\Thalamus\GBML\obj\x64\Release\GBML.dll
+D:\Thalamus\GBML\obj\x64\Release\GBML.pdb

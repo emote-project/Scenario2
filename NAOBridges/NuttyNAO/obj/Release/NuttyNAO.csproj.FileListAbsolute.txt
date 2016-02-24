@@ -1,0 +1,8 @@
+D:\NuttyWorks\Plugins\NuttyNAO.dll.config
+D:\NuttyWorks\Plugins\NuttyNAO.dll
+D:\NuttyWorks\Plugins\NuttyNAO.pdb
+D:\NAOBridges\NuttyNAO\obj\Release\NuttyNAO.csprojResolveAssemblyReference.cache
+D:\NAOBridges\NuttyNAO\obj\Release\NuttyNAO.TextInputForm.resources
+D:\NAOBridges\NuttyNAO\obj\Release\NuttyNAO.csproj.GenerateResource.Cache
+D:\NAOBridges\NuttyNAO\obj\Release\NuttyNAO.dll
+D:\NAOBridges\NuttyNAO\obj\Release\NuttyNAO.pdb

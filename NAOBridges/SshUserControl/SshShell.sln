@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SshShell", "SshShell\SshShell.csproj", "{DFE4F744-585C-461B-90FE-71D369241E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SshShellControl", "SshShellControl\SshShellControl.csproj", "{C5F679FC-B981-4B31-BCDB-F84D100B39D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySshShellGuiTest", "MySshShellGuiTest\MySshShellGuiTest.csproj", "{F2AAB7F9-0539-4318-8477-B045F8E00DD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFE4F744-585C-461B-90FE-71D369241E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE4F744-585C-461B-90FE-71D369241E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE4F744-585C-461B-90FE-71D369241E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE4F744-585C-461B-90FE-71D369241E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F679FC-B981-4B31-BCDB-F84D100B39D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F679FC-B981-4B31-BCDB-F84D100B39D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F679FC-B981-4B31-BCDB-F84D100B39D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F679FC-B981-4B31-BCDB-F84D100B39D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2AAB7F9-0539-4318-8477-B045F8E00DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2AAB7F9-0539-4318-8477-B045F8E00DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2AAB7F9-0539-4318-8477-B045F8E00DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2AAB7F9-0539-4318-8477-B045F8E00DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

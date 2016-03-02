@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="generated/jvm"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/xmlrpc-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/xmlrpc-client-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-9.2.3.v20140905.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-9.2.3.v20140905.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-security-9.2.3.v20140905.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-server-9.2.3.v20140905.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-servlet-9.2.3.v20140905.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-9.2.3.v20140905.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/spring-oxm-3.1.1.RELEASE.jar" sourcepath="C:/Users/mef3/.m2/repository/org/springframework/spring-oxm/3.1.1.RELEASE/spring-oxm-3.1.1.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="lib/spring-core-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-beans-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/castor-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/xercesImpl-2.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-2.0.0-ALPHA-2.jar"/>
+	<classpathentry kind="lib" path="lib/java-json.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections4-4.0.jar"/>
+	<classpathentry kind="lib" path="lib/args4j-2.0.21.jar"/>
+	<classpathentry kind="lib" path="lib/jni4net.j-0.8.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="lib/poi-examples-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="lib/poi-excelant-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.11-20141221.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.11-20141221.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/DEVA"/>
+	<classpathentry kind="lib" path="lib/deva.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-client-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-security-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-server-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-servlet-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-servlets-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-webapp-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-api-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-client-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-common-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-server-9.0.5.v20130815.jar"/>
+	<classpathentry kind="lib" path="lib/websocket-servlet-9.0.5.v20130815.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MySimpleDS"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

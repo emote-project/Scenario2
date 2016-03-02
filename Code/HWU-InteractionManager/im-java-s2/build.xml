@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="interaction-manager-java">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../sts-bundle/sts-3.6.3.SR1/"/>
+    <property name="XSDM.location" value="../XSDM"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="XSDM.classpath">
+        <pathelement location="${XSDM.location}/bin"/>
+        <pathelement location="${XSDM.location}/lib/dom4j-2.0.0-ALPHA-2.jar"/>
+        <pathelement location="${XSDM.location}/lib/java-json.jar"/>
+        <pathelement location="${XSDM.location}/lib/log4j-1.2.17.jar"/>
+        <pathelement location="${XSDM.location}/lib/poi-3.11-20141221.jar"/>
+        <pathelement location="${XSDM.location}/lib/poi-examples-3.11-20141221.jar"/>
+        <pathelement location="${XSDM.location}/lib/poi-excelant-3.11-20141221.jar"/>
+        <pathelement location="${XSDM.location}/lib/poi-ooxml-3.11-20141221.jar"/>
+        <pathelement location="${XSDM.location}/lib/poi-ooxml-schemas-3.11-20141221.jar"/>
+        <pathelement location="${XSDM.location}/lib/poi-scratchpad-3.11-20141221.jar"/>
+    </path>
+    <path id="interaction-manager-java.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/xmlrpc-1.1.1.jar"/>
+        <pathelement location="lib/xmlrpc-client-1.1.1.jar"/>
+        <pathelement location="lib/jetty-http-9.2.3.v20140905.jar"/>
+        <pathelement location="lib/jetty-io-9.2.3.v20140905.jar"/>
+        <pathelement location="lib/jetty-security-9.2.3.v20140905.jar"/>
+        <pathelement location="lib/jetty-server-9.2.3.v20140905.jar"/>
+        <pathelement location="lib/jetty-servlet-9.2.3.v20140905.jar"/>
+        <pathelement location="lib/jetty-util-9.2.3.v20140905.jar"/>
+        <pathelement location="lib/servlet-api-3.1.jar"/>
+        <pathelement location="lib/spring-oxm-3.1.1.RELEASE.jar"/>
+        <pathelement location="lib/spring-core-3.1.1.RELEASE.jar"/>
+        <pathelement location="lib/spring-beans-3.1.1.RELEASE.jar"/>
+        <pathelement location="lib/spring-context-3.1.1.RELEASE.jar"/>
+        <pathelement location="lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="lib/castor-1.2.jar"/>
+        <pathelement location="lib/xercesImpl-2.8.1.jar"/>
+        <pathelement location="lib/dom4j-2.0.0-ALPHA-2.jar"/>
+        <pathelement location="lib/java-json.jar"/>
+        <pathelement location="lib/commons-collections4-4.0.jar"/>
+        <pathelement location="lib/args4j-2.0.21.jar"/>
+        <path refid="XSDM.classpath"/>
+        <pathelement location="lib/jni4net.j-0.8.8.0.jar"/>
+        <pathelement location="lib/log4j-1.2.17.jar"/>
+        <pathelement location="lib/poi-3.11-20141221.jar"/>
+        <pathelement location="lib/poi-examples-3.11-20141221.jar"/>
+        <pathelement location="lib/poi-excelant-3.11-20141221.jar"/>
+        <pathelement location="lib/poi-ooxml-3.11-20141221.jar"/>
+        <pathelement location="lib/poi-ooxml-schemas-3.11-20141221.jar"/>
+        <pathelement location="lib/poi-scratchpad-3.11-20141221.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="generated/jvm">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall">
+        <ant antfile="build.xml" dir="${XSDM.location}" inheritAll="false" target="clean"/>
+    </target>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects">
+        <ant antfile="build.xml" dir="${XSDM.location}" inheritAll="false" target="build-project">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+    </target>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="generated/jvm"/>
+            <src path="src"/>
+            <classpath refid="interaction-manager-java.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Main">
+        <java classname="uk.ac.hw.emote.intman.Main" failonerror="true" fork="yes">
+            <classpath refid="interaction-manager-java.classpath"/>
+        </java>
+    </target>
+    <target name="TestScenario1">
+        <java classname="uk.ac.hw.emote.test.TestScenario1" failonerror="true" fork="yes">
+            <classpath refid="interaction-manager-java.classpath"/>
+        </java>
+    </target>
+<target name="create_run_jar" depends="build-project">
+  			<jar destfile="interaction-manager-java.jar" filesetmanifest="mergewithoutmain">
+  				<manifest>
+  					<attribute name="Main-Class" value="uk.ac.hw.emote.intman.Main"/>
+  					<attribute name="Class-Path" value="."/>
+  				</manifest>
+  				<fileset dir="bin"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/xmlrpc-1.1.1.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/xmlrpc-client-1.1.1.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/jetty-http-9.2.3.v20140905.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/jetty-io-9.2.3.v20140905.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/jetty-security-9.2.3.v20140905.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/jetty-server-9.2.3.v20140905.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/jetty-servlet-9.2.3.v20140905.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/jetty-util-9.2.3.v20140905.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/servlet-api-3.1.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/spring-oxm-3.1.1.RELEASE.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/spring-core-3.1.1.RELEASE.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/spring-beans-3.1.1.RELEASE.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/spring-context-3.1.1.RELEASE.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/commons-logging-1.1.1.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/castor-1.2.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/xercesImpl-2.8.1.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/dom4j-2.0.0-ALPHA-2.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/java-json.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/commons-collections4-4.0.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/args4j-2.0.21.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/log4j-1.2.17.jar"/>
+  				<fileset dir="${XSDM.location}/bin"/>
+  				<zipfileset excludes="META-INF/*.SF" src="${XSDM.location}/lib/dom4j-2.0.0-ALPHA-2.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="${XSDM.location}/lib/java-json.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/jni4net.j-0.8.8.0.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/poi-3.11-20141221.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/poi-3.11-20141221.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/poi-examples-3.11-20141221.jar"/>
+  				<zipfileset excludes="META-INF/*.SF" src="./lib/poi-excelant-3.11-20141221.jar"/>
+  	  			<zipfileset excludes="META-INF/*.SF" src="./lib/poi-ooxml-3.11-20141221.jar"/>
+  	  			<zipfileset excludes="META-INF/*.SF" src="./lib/poi-ooxml-schemas-3.11-20141221.jar"/>
+  	  			<zipfileset excludes="META-INF/*.SF" src="./lib/poi-scratchpad-3.11-20141221.jar"/>
+  	  		</jar>
+  		</target>
+</project>

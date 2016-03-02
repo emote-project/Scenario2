@@ -1,0 +1,916 @@
+<dialogueScript>
+    <!--  <dialoguePolicy/> -->
+	<dialogueState>
+		<var name="fromModule" type="symbolic" range="user,gameAI,enercities,skene,affect,tts,null"/>
+		<var name="userCommunicativeFunction" type="symbolic" />
+		<var name="systemCommunicativeFunction" type="symbolic" />
+		<var name="userResponseTimedOut" type="boolean" />
+		<var name="userGameAction" type="string" value="null"/>
+		
+		<var name="thisPlayer" type="symbolic" value="Environmentalist" range="Mayor,Environmentalist,Economist" />
+		
+		<var name="player1Name" type="string" />
+		<var name="player2Name" type="string" />
+		
+		<var name="gameStatus" type="symbolic" value="introEpisode" range="introEpisode,gamePlay,gameEnded"/>
+		<var name="introEpisodeStatus" type="symbolic" value="yetToGreet" range="yetToGreet,greetedUsers,taskIntroFinished"/>
+		<var name="closeEpisodeStatus" type="symbolic" value="yetToStart" range="yetToStart,greetedUsers,taskIntroFinished"/>
+		
+		<var name="gameTurnHolder" type="symbolic" value="Mayor" range="Mayor,Environmentalist,Economist" />
+		<var name="gameTurnHolderSide" type="symbolic" value="self" range="self,left,right" />
+		<var name="gameTurnChangeStatus" type="symbolic" value="ended" range="ended,changed,announced,gameStatusDiscussed" />
+		<var name="gameMoveStatus" type="symbolic" value="ended" range="ended,moveMade,moveAnnounced" />
+		
+		<var name="gameMoveMade" type="symbolic" value="none" range="none,structureBuilt,structureUpgraded,policyImplemented" />
+		<var name="gameMoveMadeBy" type="symbolic" value="none" range="Mayor,Environmentalist,Economist" />
+		<var name="gameTurnSkipped" type="boolean" value="false" />
+		<var name="gameStructureConstructed" type="boolean" value="false" />
+		<var name="gameStructureUpgraded" type="boolean" value="false" />
+		<var name="gamePolicyImplemented" type="boolean" value="false" />
+		<var name="gameCellExamined" type="boolean" value="false"/>
+		<var name="gameStructure" type="symbolic" />
+		<var name="gamePolicy" type="symbolic" />
+		<var name="gameUpgrade" type="symbolic" />
+		<var name="gameActionTakenStatus" type="symbolic" range="actionTaken,actionExplained,end" value="end" /> 
+		
+		<var name="gameLevel" type="number" value="0"/>
+		<var name="gamePopulation" type="number" value="0"/>
+		<var name="gameTargetPopulation" type="number" value="0"/>
+		<var name="gameMoney" type="number" value="0"/>
+		<var name="gameMoneyEarning" type="number" value="0"/>
+		<var name="gameOil" type="number" value="0"/>
+		<var name="gamePowerConsumption" type="number" value="0"/>
+		<var name="gamePowerProduction" type="number" value="0"/>
+		<var name="gameEnvironmentScore" type="number" value="0"/>
+		<var name="gameWellbeingScore" type="number" value="0"/>
+		<var name="gameEconomyScore" type="number" value="0"/>
+		<var name="gameGlobalScore" type="number" value="0"/>
+		
+		<var name="lastGameTurnHolder" type="symbolic" value="Mayor" range="Mayor,Environmentalist,Economist"/>
+		<var name="lastGameLevel" type="number" value="0"/>
+		<var name="lastGamePopulation" type="number" value="0"/>
+		<var name="lastGameTargetPopulation" type="number" value="0"/>
+		<var name="lastGameMoney" type="number" value="0"/>
+		<var name="lastGameMoneyEarning" type="number" value="0"/>
+		<var name="lastGameOil" type="number" value="0"/>
+		<var name="lastGamePowerConsumption" type="number" value="0"/>
+		<var name="lastGamePowerProduction" type="number" value="0"/>
+		<var name="lastGameEnvironmentScore" type="number" value="0"/>
+		<var name="lastGameWellbeingScore" type="number" value="0"/>
+		<var name="lastGameEconomyScore" type="number" value="0"/>
+		<var name="lastGameGlobalScore" type="number" value="0"/>
+		
+		<var name="deltaGameLevel" type="number" value="0"/>
+		<var name="deltaGamePopulation" type="number" value="0"/>
+		<var name="deltaGameTargetPopulation" type="number" value="0"/>
+		<var name="deltaGameMoney" type="number" value="0"/>
+		<var name="deltaGameMoneyEarning" type="number" value="0"/>
+		<var name="deltaGameOil" type="number" value="0"/>
+		<var name="deltaGamePowerConsumption" type="number" value="0"/>
+		<var name="deltaGamePowerProduction" type="number" value="0"/>
+		<var name="deltaGameEnvironmentScore" type="number" value="0"/>
+		<var name="deltaGameWellbeingScore" type="number" value="0"/>
+		<var name="deltaGameEconomyScore" type="number" value="0"/>
+		<var name="deltaGameGlobalScore" type="number" value="0"/>
+ 		
+ 		<var name="effectOnEnvironment" type="symbolic" value="neutral" range="neutral,positive,negative"/>
+ 		<var name="effectOnEconomy" type="boolean" value="neutral" range="neutral,positive,negative"/>
+ 		<var name="effectOnWellbeing" type="boolean" value="neutral" range="neutral,positive,negative"/>
+ 		<var name="effectOnGlobal" type="boolean" value="neutral" range="neutral,positive,negative"/>
+ 		<var name="effectOnPopulation" type="boolean" value="neutral" range="neutral,positive,negative"/>
+ 		<var name="effectOnNonRenewables" type="boolean" value="neutral" range="neutral,positive,negative"/>
+ 		<var name="effectOnMoney" type="boolean" value="neutral" range="neutral,positive,negative"/>
+ 		<var name="effectOnPower" type="boolean" value="neutral" range="neutral,positive,negative"/>
+ 		
+ 		<var name="bestActionIdentified" type="boolean" value="false"/>
+	    <var name="bestActionType" type="number" />
+	    <var name="bestActionSubtype" type="number" />
+	    <var name="bestActionPosX" type="string" />
+	    <var name="bestActionPosY" type="string" />
+ 		
+		<var name="userAffect" type="symbolic" range="sad,happy,neutral,null"/>
+		<var name="affectConfidence" type="number" value="0"/>
+		<var name="currentUtterance" type="string" value="null"/>
+		<var name="utteranceStatus" type="symbolic" value="delivered" range="playing,delivered"/>
+		<var name="lastUtteranceId" type="string" value="null"/>
+	</dialogueState>
+	<input>
+	    <var name="fromModule" type="symbolic" />
+	</input>
+	<input module="hub">
+	    <var name="time-out" type="boolean" />
+	</input>
+	<input module="tts">
+	    <var name="utteranceStatus" type="symbolic" range="playing,delivered"/>
+	</input>
+	<input module="user">
+	    <var name="communicativeFunction" type="symbolic" />
+	</input>
+	<input module="enercitiesAI">
+	    <var name="bestActionIdentified" type="boolean" />
+	    <var name="bestActionType" type="number" />
+	    <var name="bestActionSubtype" type="number" />
+	    <var name="bestActionPosX" type="string" />
+	    <var name="bestActionPosY" type="string" />
+	</input>
+	<input module="enercities">
+	    <var name="turnChanged" type="boolean" />
+	    <var name="turnSkipped" type="boolean" />
+	    <var name="gameTurnHolder" type="symbolic"/>
+	    <var name="gameStructureConstructed" type="boolean" value="false" />
+	    <var name="gameStructure" type="symbolic" value="null"/>
+	    <var name="cellExamined" type="boolean" value="false"/>
+	    <var name="structureUpgraded" type="boolean" value="false"/>
+	    <var name="upgrade" type="symbolic" value="null"/>
+	    <var name="policyImplemented" type="boolean" value="false"/>
+	    <var name="policy" type="symbolic" value="null"/>
+	    <var name="Level" type="number" />
+		<var name="Population" type="number" />
+		<var name="TargetPopulation" type="number" />
+		<var name="Money" type="number" />
+		<var name="MoneyEarning" type="number" />
+		<var name="Oil" type="number" />
+		<var name="PowerConsumption" type="number" />
+		<var name="PowerProduction" type="number" />
+		<var name="EnvironmentScore" type="number" />
+		<var name="WellbeingScore" type="number" />
+		<var name="EconomyScore" type="number" />
+		<var name="GlobalScore" type="number" />
+	</input>
+	<output>
+	</output>
+	<metric>
+	    <var name="turns" type="number" value="0" />
+	</metric>
+	<!-- STATE UPDATE RULES -->
+	
+	<stateUpdateRules>
+		<rule comment="copy input from hub">
+			<precondition>
+				<equals>
+				    <op1 var="fromModule" domain="input"/>
+				    <op2 value="hub" />
+				</equals>    
+			</precondition>
+			<action>
+			    <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="userResponseTimedOut" domain="dstate" />
+					<assigner value="true" />
+				</assign>
+			</action>
+		</rule>
+		<rule comment="copy input from affect">
+			<precondition>
+				<equals>
+				    <op1 var="fromModule" domain="input"/>
+				    <op2 value="affect" />
+				</equals>    
+			</precondition>
+			<action>
+			    <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="userAffect" domain="dstate" />
+					<assigner var="affect" domain="input"/>
+				</assign>
+				<assign>
+					<assignee var="affectConfidence" domain="dstate" />
+					<assigner var="confidence" domain="input"/>
+				</assign>
+			</action>
+		</rule>
+		<rule comment="copy input from tts module">
+			<precondition>
+				<equals>
+				    <op1 var="fromModule" domain="input"/>
+				    <op2 value="tts" />
+				</equals>    
+			</precondition>
+			<action>
+			    <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="fromModule" domain="input" />
+					<assigner value="null"/>
+				</assign>
+				<assign>
+					<assignee var="utteranceStatus" domain="dstate" />
+					<assigner var="utteranceStatus" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="utteranceStatus" domain="input" />
+					<assigner value="null"/>
+				</assign>
+			</action>
+		</rule>
+		<!--  rule comment="always set utteranceStatus to delivered">
+			<precondition/>
+			<action>
+			    <assign>
+					<assignee var="utteranceStatus" domain="dstate" />
+					<assigner value="delivered" />
+				</assign>
+			</action>
+		</rule-->
+		<rule comment="copy input enercities AI">
+			<precondition>
+				<equals>
+				    <op1 var="fromModule" domain="input"/>
+				    <op2 value="enercitiesAI" />
+				</equals>    
+			</precondition>
+			<action>
+			    <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="fromModule" domain="input" />
+					<assigner value="null"/>
+				</assign>
+				<assign>
+					<assignee var="bestActionIdentified" domain="dstate" />
+					<assigner var="bestActionIdentified" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="bestActionType" domain="dstate" />
+					<assigner var="bestActionType" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="bestActionSubtype" domain="dstate" />
+					<assigner var="bestActionSubtype" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="bestActionPosX" domain="dstate" />
+					<assigner var="bestActionPosX" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="bestActionPosY" domain="dstate" />
+					<assigner var="bestActionPosY" domain="input" />
+				</assign>
+			</action>
+		</rule>
+		<rule comment="copying input from enercities - when turn changes">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="enercities" />
+					</equals>
+					<equals>
+					    <op1 var="turnChanged" domain="input"/>
+					    <op2 value="true" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="gameTurnChangeStatus" domain="dstate" />
+					<assigner value="changed" />
+				</assign>
+				<assign>
+					<assignee var="lastGameTurnHolder" domain="dstate" />
+					<assigner var="gameTurnHolder" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameTurnHolder" domain="dstate" />
+					<assigner var="gameTurnHolder" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameLevel" domain="dstate" />
+					<assigner var="gameLevel" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameLevel" domain="dstate" />
+					<assigner var="Level" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGamePopulation" domain="dstate" />
+					<assigner var="gamePopulation" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gamePopulation" domain="dstate" />
+					<assigner var="Population" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameTargetPopulation" domain="dstate" />
+					<assigner var="gameTargetPopulation" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameTargetPopulation" domain="dstate" />
+					<assigner var="TargetPopulation" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameMoney" domain="dstate" />
+					<assigner var="gameMoney" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameMoney" domain="dstate" />
+					<assigner var="Money" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameMoneyEarning" domain="dstate" />
+					<assigner var="gameMoneyEarning" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameMoneyEarning" domain="dstate" />
+					<assigner var="MoneyEarning" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameOil" domain="dstate" />
+					<assigner var="gameOil" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameOil" domain="dstate" />
+					<assigner var="Oil" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGamePowerConsumption" domain="dstate" />
+					<assigner var="gamePowerConsumption" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gamePowerConsumption" domain="dstate" />
+					<assigner var="PowerConsumption" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGamePowerProduction" domain="dstate" />
+					<assigner var="gamePowerProduction" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gamePowerProduction" domain="dstate" />
+					<assigner var="PowerProduction" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameEnvironmentScore" domain="dstate" />
+					<assigner var="gameEnvironmentScore" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameEnvironmentScore" domain="dstate" />
+					<assigner var="EnvironmentScore" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameWellbeingScore" domain="dstate" />
+					<assigner var="gameWellbeingScore" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameWellbeingScore" domain="dstate" />
+					<assigner var="WellbeingScore" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameEconomyScore" domain="dstate" />
+					<assigner var="gameEconomyScore" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameEconomyScore" domain="dstate" />
+					<assigner var="EconomyScore" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="lastGameGlobalScore" domain="dstate" />
+					<assigner var="gameGlobalScore" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gameGlobalScore" domain="dstate" />
+					<assigner var="GlobalScore" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="bestActionIdentified" domain="dstate" />
+					<assigner value="false" />
+				</assign>
+				
+			</action>
+	    </rule>
+	    <rule comment="copying input from enercities - when turn skipped">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="enercities" />
+					</equals>
+					<equals>
+					    <op1 var="turnSkipped" domain="input"/>
+					    <op2 value="true" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="gameTurnSkipped" domain="dstate" />
+					<assigner var="turnSkipped" domain="input" />
+				</assign>
+			</action>
+	    </rule>
+	     <rule comment="copying input from enercities - when policyImplemented">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="enercities" />
+					</equals>
+					<equals>
+					    <op1 var="policyImplemented" domain="input"/>
+					    <op2 value="true" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="gamePolicyImplemented" domain="dstate" />
+					<assigner var="policyImplemented" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gamePolicy" domain="dstate" />
+					<assigner var="policy" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveStatus" domain="dstate" />
+					<assigner value="moveMade" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveMade" domain="dstate" />
+					<assigner value="policyImplemented" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveMadeBy" domain="dstate" />
+					<assigner var="gameTurnHolder" domain="dstate" />
+				</assign>
+			</action>
+	    </rule>
+	    <rule comment="copying input from enercities - when structureUpgraded">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="enercities" />
+					</equals>
+					<equals>
+					    <op1 var="structureUpgraded" domain="input"/>
+					    <op2 value="true" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="gameStructureUpgraded" domain="dstate" />
+					<assigner var="structureUpgraded" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gameUpgrade" domain="dstate" />
+					<assigner var="upgrade" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveStatus" domain="dstate" />
+					<assigner value="moveMade" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveMade" domain="dstate" />
+					<assigner value="structureUpgraded" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveMadeBy" domain="dstate" />
+					<assigner var="gameTurnHolder" domain="dstate" />
+				</assign>
+			</action>
+	    </rule>
+	    <rule comment="copying input from enercities - when a structure was examined in a cell">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="enercities" />
+					</equals>
+					<equals>
+					    <op1 var="cellExamined" domain="input"/>
+					    <op2 value="true" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="gameCellExamined" domain="dstate" />
+					<assigner var="cellExamined" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gameStructure" domain="dstate" />
+					<assigner var="gameStructure" domain="input" />
+				</assign>
+			</action>
+	    </rule>
+	    <rule comment="copying input from enercities - when something was built">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="enercities" />
+					</equals>
+					<equals>
+					    <op1 var="gameStructureConstructed" domain="input"/>
+					    <op2 value="true" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="gameStructureConstructed" domain="dstate" />
+					<assigner var="gameStructureConstructed" domain="input"/>
+				</assign>
+				<assign>
+					<assignee var="gameStructure" domain="dstate" />
+					<assigner var="gameStructure" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveStatus" domain="dstate" />
+					<assigner value="moveMade" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveMade" domain="dstate" />
+					<assigner value="structureBuilt" />
+				</assign>
+				<assign>
+					<assignee var="gameMoveMadeBy" domain="dstate" />
+					<assigner var="gameTurnHolder" domain="dstate" />
+				</assign>
+			</action>
+	    </rule>
+	    <rule comment="when turn changes.. measure change in parameters">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="deltaGameLevel" domain="dstate" />
+					<assigner>
+							<subtract>
+								<op1 var="gameLevel" domain="dstate" />
+								<op2 var="lastGameLevel" domain="dstate" />
+							</subtract>
+					</assigner>
+				</assign>
+	            <assign>
+					<assignee var="deltaGamePopulation" domain="dstate" />
+					<assigner>
+							<subtract>
+								<op1 var="gamePopulation" domain="dstate" />
+								<op2 var="lastGamePopulation" domain="dstate" />
+							</subtract>
+					</assigner>
+				</assign>
+				<assign>
+					<assignee var="deltaGameEnvironmentScore" domain="dstate" />
+					<assigner>
+							<subtract>
+								<op1 var="gameEnvironmentScore" domain="dstate" />
+								<op2 var="lastGameEnvironmentScore" domain="dstate" />
+							</subtract>
+					</assigner>
+				</assign>
+				<assign>
+					<assignee var="deltaGameWellbeingScore" domain="dstate" />
+					<assigner>
+							<subtract>
+								<op1 var="gameWellbeingScore" domain="dstate" />
+								<op2 var="lastGameWellbeingScore" domain="dstate" />
+							</subtract>
+					</assigner>
+				</assign>
+				<assign>
+					<assignee var="deltaGameEconomyScore" domain="dstate" />
+					<assigner>
+							<subtract>
+								<op1 var="gameEconomyScore" domain="dstate" />
+								<op2 var="lastGameEconomyScore" domain="dstate" />
+							</subtract>
+					</assigner>
+				</assign>
+				<assign>
+					<assignee var="deltaGameGlobalScore" domain="dstate" />
+					<assigner>
+							<subtract>
+								<op1 var="gameGlobalScore" domain="dstate" />
+								<op2 var="lastGameGlobalScore" domain="dstate" />
+							</subtract>
+					</assigner>
+				</assign>
+				<assign>
+					<assignee var="deltaGameOil" domain="dstate" />
+					<assigner>
+							<subtract>
+								<op1 var="gameOil" domain="dstate" />
+								<op2 var="lastGameOil" domain="dstate" />
+							</subtract>
+					</assigner>
+				</assign>
+				
+			</action>
+	    </rule>
+	     <rule comment="when turn changes.. set effect to neutral">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+				</and>
+			</precondition>
+			<action>
+				<assign>
+					<assignee var="effectOnEnvironment" domain="dstate" />
+					<assigner value="neutral" />
+				</assign>
+				<assign>
+					<assignee var="effectOnWellbeing" domain="dstate" />
+					<assigner value="neutral" />
+				</assign>
+				<assign>
+					<assignee var="effectOnEconomy" domain="dstate" />
+					<assigner value="neutral" />
+				</assign>
+			</action>
+		</rule>
+	    <rule comment="when turn changes.. calculate effect on environment 1">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+					<ge>
+					    <op1 var="deltaGameEnvironmentScore" domain="dstate"/>
+					    <op2 value="2" type="number"/>
+					</ge>
+				</and>
+	        </precondition>
+	        <action>
+	        	<assign>
+					<assignee var="effectOnEnvironment" domain="dstate" />
+					<assigner value="positive" />
+				</assign>
+	        </action>
+	    </rule>
+	    <rule comment="when turn changes.. calculate effect on environment 2">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+					<le>
+					    <op1 var="deltaGameEnvironmentScore" domain="dstate"/>
+					    <op2 value="-2" type="number"/>
+					</le>
+				</and>
+	        </precondition>
+	        <action>
+	        	<assign>
+					<assignee var="effectOnEnvironment" domain="dstate" />
+					<assigner value="negative" />
+				</assign>
+	        </action>
+	    </rule>
+	    <rule comment="when turn changes.. calculate effect on wellbeing 1">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+					<ge>
+					    <op1 var="deltaGameWellbeingScore" domain="dstate"/>
+					    <op2 value="2" type="number"/>
+					</ge>
+				</and>
+	        </precondition>
+	        <action>
+	        	<assign>
+					<assignee var="effectOnWellbeing" domain="dstate" />
+					<assigner value="positive" />
+				</assign>
+	        </action>
+	    </rule>
+	    <rule comment="when turn changes.. calculate effect on wellbeing 2">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+					<le>
+					    <op1 var="deltaGameWellbeingScore" domain="dstate"/>
+					    <op2 value="-2" type="number"/>
+					</le>
+				</and>
+	        </precondition>
+	        <action>
+	        	<assign>
+					<assignee var="effectOnWellbeing" domain="dstate" />
+					<assigner value="negative" />
+				</assign>
+	        </action>
+	    </rule>
+	    <rule comment="when turn changes.. calculate effect on economy 1">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+					<ge>
+					    <op1 var="deltaGameEconomyScore" domain="dstate"/>
+					    <op2 value="2" type="number"/>
+					</ge>
+				</and>
+	        </precondition>
+	        <action>
+	        	<assign>
+					<assignee var="effectOnEconomy" domain="dstate" />
+					<assigner value="positive" />
+				</assign>
+	        </action>
+	    </rule>
+	    <rule comment="when turn changes.. calculate effect on economy 2">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnChangeStatus" domain="dstate"/>
+					    <op2 value="changed" />
+					</equals>
+					<le>
+					    <op1 var="deltaGameEconomyScore" domain="dstate"/>
+					    <op2 value="-2" type="number"/>
+					</le>
+				</and>
+	        </precondition>
+	        <action>
+	        	<assign>
+					<assignee var="effectOnEconomy" domain="dstate" />
+					<assigner value="negative" />
+				</assign>
+	        </action>
+	    </rule>
+	    <rule id="rule_intro1" comment="Intro1">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="utteranceStatus" domain="dstate"/>
+					    <op2 value="delivered" />
+					</equals>
+					<equals>
+					    <op1 var="gameStatus" domain="dstate"/>
+					    <op2 value="introEpisode" />
+					</equals>
+					<equals>
+					    <op1 var="introEpisodeStatus" domain="dstate"/>
+					    <op2 value="yetToGreet" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+	                <assignee var="introEpisodeStatus" domain="dstate"/>
+					<assigner value="greetedUsers" />
+	            </assign>
+	        </action>
+	    </rule> 
+	    <rule id="rule_intro2" comment="Intro2">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="utteranceStatus" domain="dstate"/>
+					    <op2 value="delivered" />
+					</equals>
+					<equals>
+					    <op1 var="gameStatus" domain="dstate"/>
+					    <op2 value="introEpisode" />
+					</equals>
+					<equals>
+					    <op1 var="introEpisodeStatus" domain="dstate"/>
+					    <op2 value="taskIntroFinished" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+	                <assignee var="gameStatus" domain="dstate"/>
+					<assigner value="gamePlay" />
+	            </assign>
+	        </action>
+	    </rule>
+	</stateUpdateRules>
+	
+	<!-- ACTION SELECTION RULES -->
+	<actionSelectionRules>
+	    <strategy id="main">
+	     <rule id="respond_to_tts" comment="TTS module informs the utteranceStatus to IM..IM responds with nothing!">
+	        <precondition>
+	            <equals>
+					<op1 var="utteranceStatus"  domain="dstate"/>
+					<op2 value="playing"/>
+				</equals>
+	        </precondition>
+	        <action/>
+	    </rule>
+	    
+	    <rule id="rule_turnChange30" comment="If its your turn, play">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="utteranceStatus" domain="dstate"/>
+					    <op2 value="delivered" />
+					</equals>
+					<equals>
+					    <op1 var="gameTurnHolder" domain="dstate"/>
+					    <op2 var="thisPlayer" domain="dstate" />
+					</equals>
+					<equals>
+					    <op1 var="bestActionIdentified" domain="dstate"/>
+					    <op2 value="true" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+	                <assignee var="toModule" domain="output"/>
+					<assigner value="skene" />
+	            </assign>
+	            <assign>
+	                <assignee var="fromModule" domain="output"/>
+					<assigner value="system" />
+	            </assign>
+	            <assign>
+	                <assignee var="communicativeFunction" domain="output"/>
+					<assigner value="executeGameAction" />
+	            </assign>
+	            <assign>
+	                <assignee var="gameActionType" domain="output"/>
+					<assigner var="bestActionType" domain="dstate"/>
+	            </assign>
+	            <assign>
+	                <assignee var="gameActionSubtype" domain="output"/>
+					<assigner var="bestActionSubtype" domain="dstate"/>
+	            </assign>
+	            <assign>
+	                <assignee var="gamePositionX" domain="output"/>
+					<assigner var="bestActionPosX" domain="dstate" />
+	            </assign>
+	            <assign>
+	                <assignee var="gamePositionY" domain="output"/>
+					<assigner var="bestActionPosY" domain="dstate" />
+	            </assign>
+	            <assign>
+	                <assignee var="gameTurnHolder" domain="output"/>
+					<assigner var="gameTurnHolder" domain="dstate" />
+	            </assign>
+	            <assign>
+					<assignee var="gameTurnHolder" domain="dstate" />
+					<assigner value="null" />
+				</assign>
+	            <assign>
+	                <assignee var="gameTurnChangeStatus" domain="dstate"/>
+					<assigner value="ended"/>
+	            </assign>
+	            <assign>
+	                <assignee var="utteranceStatus" domain="dstate"/>
+					<assigner value="delivered"/>
+	            </assign>
+	        </action>
+	    </rule>
+	   
+		</strategy>
+	</actionSelectionRules>
+</dialogueScript>

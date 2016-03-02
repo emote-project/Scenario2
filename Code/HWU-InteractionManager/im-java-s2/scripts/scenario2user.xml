@@ -1,0 +1,201 @@
+<dialogueScript>
+    <dialogueState>
+		<var name="fromModule" type="symbolic" range="system,gameAI,enercities,null"/>
+		<var name="userCommunicativeFunction" type="symbolic" />
+		<var name="systemCommunicativeFunction" type="symbolic" />
+		<var name="currentStepTimeOut" type="number" value="-1"/>
+		<var name="gameActionExecuted" type="boolean" value="false"/>
+		<var name="nextBestGameAction" type="string" value="null"/>
+		<var name="gameStructure" type="string" value="null"/>
+		<var name="gamePositionX" type="string" value="null"/>
+		<var name="gamePositionY" type="string" value="null"/>
+		<var name="gameTurnHolder" type="string" value="user"/>
+		<var name="userRole" type="string" value="null"/>
+	</dialogueState>
+	<input>
+	    <var name="fromModule" type="symbolic" />
+	</input>
+	<input module="system">
+	    <var name="communicativeFunction" type="symbolic" />
+	</input>
+	<input module="gameAI">
+	    <var name="nextBestGameAction" type="string" />
+	    <var name="gameStructure" type="string" />
+	    <var name="gamePositionX" type="string" />
+	    <var name="gamePositionY" type="string" />
+	</input>
+	<input module="enercities">
+	    <var name="gameActionExecuted" type="string" />
+	</input>
+	<output>
+	</output>
+	<metric>
+	    <var name="turns" type="number" value="0" />
+	</metric>
+	<!-- STATE UPDATE RULES -->
+	
+	<stateUpdateRules>
+		<rule comment="copy input variable from system">
+			<precondition>
+			    <and>
+				<equals>
+				    <op1 var="fromModule" domain="input"/>
+				    <op2 value="system"/>
+				</equals>
+				</and>    
+			</precondition>
+			<action>
+			    <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+			    <assign>
+					<assignee var="systemCommunicativeFunction" domain="dstate" />
+					<assigner var="communicativeFunction" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="fromModule" domain="input" />
+					<assigner value="null" />
+				</assign>
+			</action>
+		</rule>
+		<rule comment="copying input from enercities">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="enercities" />
+					</equals> 
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="gameActionExecuted" domain="dstate" />
+					<assigner var="gameActionExecuted" domain="input" />
+				</assign>
+	        </action>
+	    </rule>
+	    <rule comment="copying input from gameAI">
+	        <precondition>
+	            <and>
+		           <equals>
+					    <op1 var="fromModule" domain="input"/>
+					    <op2 value="gameAI" />
+					</equals> 
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+					<assignee var="fromModule" domain="dstate" />
+					<assigner var="fromModule" domain="input" />
+				</assign>
+	            <assign>
+					<assignee var="nextBestGameAction" domain="dstate" />
+					<assigner var="nextBestGameAction" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gameStructure" domain="dstate" />
+					<assigner var="gameStructure" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gamePositionX" domain="dstate" />
+					<assigner var="gamePositionX" domain="input" />
+				</assign>
+				<assign>
+					<assignee var="gamePositionY" domain="dstate" />
+					<assigner var="gamePositionY" domain="input" />
+				</assign>
+	        </action>
+	    </rule>
+	    
+		
+	</stateUpdateRules>
+	
+	<!-- ACTION SELECTION RULES -->
+	<actionSelectionRules>
+	    <strategy id="main">
+	    <rule id="rule_one" comment="Get next best move from game AI">
+	        <precondition>
+	            <and>
+		            <equals>
+					    <op1 var="gameTurnHolder" domain="dstate"/>
+					    <op2 value="user" />
+					</equals> 
+					<equals>
+						    <op1 var="nextBestGameAction" domain="dstate"/>
+						    <op2 value="null" />
+					</equals>
+				</and>
+	        </precondition>
+	        <action>
+	            <assign>
+	                <assignee var="toModule" domain="output"/>
+					<assigner value="gameAI" />
+	            </assign>
+	            <assign>
+	                <assignee var="fromModule" domain="output"/>
+					<assigner value="user" />
+	            </assign>
+	            <assign>
+	                <assignee var="communicativeFunction" domain="output"/>
+					<assigner value="getNextMove" />
+	            </assign>
+	            <assign>
+	                <assignee var="strategy" domain="output"/>
+					<assigner var="userRole" domain="dstate" />
+	            </assign>
+	        </action>
+	    </rule>
+	    <rule id="rule_two" comment="Make the move: send the game action to enercities">
+	        <precondition>
+	            <equals>
+				    <op1 var="gameTurnHolder" domain="dstate"/>
+				    <op2 value="user" />
+				</equals> 
+				<not-equals>
+					    <op1 var="nextBestGameAction" domain="dstate"/>
+					    <op2 value="null" />
+				</not-equals>
+				<equals>
+				    <op1 var="gameActionExecuted" domain="dstate"/>
+				    <op2 value="false" />
+				</equals>
+	        </precondition>
+	        <action>
+	            <assign>
+	                <assignee var="toModule" domain="output"/>
+					<assigner value="enercities" />
+	            </assign>
+	            <assign>
+	                <assignee var="fromModule" domain="output"/>
+					<assigner value="user" />
+	            </assign>
+	            <assign>
+	                <assignee var="communicativeFunction" domain="output"/>
+					<assigner value="executeGameAction" />
+	            </assign>
+	            <assign>
+	                <assignee var="gameAction" domain="output"/>
+					<assigner var="nextBestGameAction" domain="dstate"/>
+	            </assign>
+	            <assign>
+					<assignee var="gameStructure" domain="output" />
+					<assigner var="gameStructure" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gamePositionX" domain="output" />
+					<assigner var="gamePositionX" domain="dstate" />
+				</assign>
+				<assign>
+					<assignee var="gamePositionY" domain="output" />
+					<assigner var="gamePositionY" domain="dstate" />
+				</assign>
+	        </action>
+	    </rule>
+	    </strategy>
+	</actionSelectionRules>
+</dialogueScript>

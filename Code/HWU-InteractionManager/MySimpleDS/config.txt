@@ -1,0 +1,14 @@
+Dialogues=2000000
+Verbose=false
+
+AddressPort=ws://localhost:8082/simpleds
+SavingFrequency=2500
+
+NumInputs=10 
+NumActions=9
+LearningSteps=2000000
+ExperienceSize=100000
+BurningSteps=100
+DiscountFactor=0.7
+MinimumEpsilon=0.00001
+BatchSize=32

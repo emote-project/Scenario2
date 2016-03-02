@@ -1,0 +1,81 @@
+namespace EmoteEnercitiesMessages
+{
+    public enum UpgradeType
+    {
+        NotUsed = 0,
+        Solar_Roofs = 1,
+        Improved_Insulation = 2,
+        Rainwater_Storage = 3,
+        Bus_Stop = 4,
+        Rooftop_Windmills = 5,
+        Thermal_Storage = 6,
+        Birdhouse = 7,
+        Eco_Roofs = 8,
+        Subway_Station = 9,
+        Energy_Efficient_Lightbulbs = 10,
+        Recycling_Facilities = 11,
+        CO2_Reduction_Plan = 12,
+        Cradle_2_Cradle = 13,
+        Bio_Food = 14,
+        Veggie_Food = 15,
+        Watch_Tower = 16,
+        Forest_Health_Plan = 17,
+        Wildlife_Preservation = 18,
+        Exhaust_Scrubbers = 19,
+        Coal_Washing = 20,
+        CO2_Storage = 21,
+        Bigger_Rotor_Blades = 22,
+        Next_Gen_Solar_Cells = 23,
+        Moving_Solar_Pads = 24,
+        Improved_Uranium_Storage = 25,
+        Uranium_Recycling = 26,
+    }
+}
+
+
+using System;
+
+namespace EmoteEnercitiesMessages
+{
+    public enum PolicyType
+    {
+        NotUsed = 0,
+        CO2_Taxes = 1,
+        Electric_Car_Grid = 2,
+        Energy_Education_Program = 3,
+        Eco_Tourism_Program = 4,
+        Sustainable_Technology_Fund = 5,
+    }
+}
+
+using System;
+
+namespace EmoteEnercitiesMessages
+{
+    public enum StructureType
+    {
+        NotUsed = 0,
+        Park = 1,
+        Forest = 2,
+        Wildlife_Reserve = 3,
+        Suburban = 4,
+        Urban = 5,
+        Stadium = 6,
+        Light_Industry = 7,
+        Heavy_Industry = 8,
+        Commercial = 9,
+        Coal_Plant = 10,
+        Nuclear_Plant = 11,
+        Windmills = 12,
+        Solar_Plant = 13,
+        Hydro_Plant = 14,
+        City_Hall = 15,
+        Coal_Plant_Small = 16,
+        Residential_Tower = 17,
+        Super_Solar = 18,
+        Super_WindTurbine = 19,
+        Nuclear_Fusion = 20,
+        Market = 21,
+        Public_Services = 22,
+    }
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project im-java-s2 with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="F:/EMOTE-Scenario2/2015-05-29/im-java-s2/im-java-s2.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="uk.ac.hw.emote.intman.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ xmlrpc-1.1.1.jar xmlrpc-client-1.1.1.jar jetty-http-9.2.3.v20140905.jar jetty-io-9.2.3.v20140905.jar jetty-security-9.2.3.v20140905.jar jetty-server-9.2.3.v20140905.jar jetty-servlet-9.2.3.v20140905.jar jetty-util-9.2.3.v20140905.jar servlet-api-3.1.jar spring-oxm-3.1.1.RELEASE.jar spring-core-3.1.1.RELEASE.jar spring-beans-3.1.1.RELEASE.jar spring-context-3.1.1.RELEASE.jar commons-logging-1.1.1.jar castor-1.2.jar xercesImpl-2.8.1.jar dom4j-2.0.0-ALPHA-2.jar java-json.jar commons-collections4-4.0.jar args4j-2.0.21.jar dom4j-2.0.0-ALPHA-2.jar java-json.jar log4j-1.2.17.jar poi-3.11-20141221.jar poi-examples-3.11-20141221.jar poi-excelant-3.11-20141221.jar poi-ooxml-3.11-20141221.jar poi-ooxml-schemas-3.11-20141221.jar poi-scratchpad-3.11-20141221.jar jni4net.j-0.8.8.0.jar log4j-1.2.17.jar poi-3.11-20141221.jar poi-examples-3.11-20141221.jar poi-excelant-3.11-20141221.jar poi-ooxml-3.11-20141221.jar poi-ooxml-schemas-3.11-20141221.jar poi-scratchpad-3.11-20141221.jar dom4j-2.0.0-ALPHA-2.jar java-json.jar log4j-1.2.17.jar poi-3.11-20141221.jar poi-examples-3.11-20141221.jar poi-excelant-3.11-20141221.jar poi-ooxml-3.11-20141221.jar poi-ooxml-schemas-3.11-20141221.jar poi-scratchpad-3.11-20141221.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="F:/EMOTE-Scenario2/2015-05-29/im-java-s2/bin"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="xmlrpc-1.1.1.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="xmlrpc-client-1.1.1.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="jetty-http-9.2.3.v20140905.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="jetty-io-9.2.3.v20140905.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="jetty-security-9.2.3.v20140905.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="jetty-server-9.2.3.v20140905.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="jetty-servlet-9.2.3.v20140905.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="jetty-util-9.2.3.v20140905.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="servlet-api-3.1.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="spring-oxm-3.1.1.RELEASE.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="spring-core-3.1.1.RELEASE.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="spring-beans-3.1.1.RELEASE.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="spring-context-3.1.1.RELEASE.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="commons-logging-1.1.1.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="castor-1.2.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="xercesImpl-2.8.1.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="dom4j-2.0.0-ALPHA-2.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="java-json.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="commons-collections4-4.0.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="args4j-2.0.21.jar"/>
+            <fileset dir="F:/STSWorkspace/XSDM/bin"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="dom4j-2.0.0-ALPHA-2.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="java-json.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="log4j-1.2.17.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="poi-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="poi-examples-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="poi-excelant-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="poi-ooxml-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="poi-ooxml-schemas-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\XSDM\lib" includes="poi-scratchpad-3.11-20141221.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="jni4net.j-0.8.8.0.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="log4j-1.2.17.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="poi-3.11-20141221.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="poi-examples-3.11-20141221.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="poi-excelant-3.11-20141221.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="poi-ooxml-3.11-20141221.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="poi-ooxml-schemas-3.11-20141221.jar"/>
+            <zipfileset dir="F:\EMOTE-Scenario2\2015-05-29\im-java-s2\lib" includes="poi-scratchpad-3.11-20141221.jar"/>
+            <fileset dir="F:/STSWorkspace/DEVA/bin"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="dom4j-2.0.0-ALPHA-2.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="java-json.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="log4j-1.2.17.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="poi-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="poi-examples-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="poi-excelant-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="poi-ooxml-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="poi-ooxml-schemas-3.11-20141221.jar"/>
+            <zipfileset dir="F:\STSWorkspace\DEVA\lib" includes="poi-scratchpad-3.11-20141221.jar"/>
+        </jar>
+    </target>
+</project>

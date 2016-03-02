@@ -1,0 +1,44 @@
+
+F:\EMOTE-Scenario2\2015-05-29\im-java-s2>echo "hello" 
+"hello"
+
+F:\EMOTE-Scenario2\2015-05-29\im-java-s2>dir
+ Volume in drive F is EMOTE
+ Volume Serial Number is 1854-0DEA
+
+ Directory of F:\EMOTE-Scenario2\2015-05-29\im-java-s2
+
+03/12/2015  11:53    <DIR>          .
+03/12/2015  11:53    <DIR>          ..
+02/12/2015  15:40             3,648 .classpath
+02/12/2015  14:54    <DIR>          .externalToolBuilders
+02/12/2015  14:54    <DIR>          .settings
+14/08/2015  15:15             7,245 ant.xml
+02/12/2015  15:40    <DIR>          bin
+09/04/2015  11:49             9,362 build - Copy.xml
+09/04/2015  11:49             9,362 build.xml
+27/07/2015  09:59             1,928 enercitiesCodes.txt
+02/12/2015  14:54    <DIR>          generated
+03/12/2015  11:53                72 hello.bat
+30/11/2015  18:14        36,900,329 im-java-s2.jar
+02/12/2015  15:20    <DIR>          imlogs
+02/12/2015  15:37    <DIR>          lib
+22/05/2015  11:51             3,207 log4j.properties
+03/12/2015  11:48                67 output_20151203_114855.txt
+03/12/2015  11:49             1,508 output_20151203_114918.txt
+03/12/2015  11:52             1,842 output_20151203_115250.txt
+03/12/2015  11:53                 0 output_20151203_115319.txt
+02/12/2015  14:56    <DIR>          proxygen
+02/12/2015  14:56    <DIR>          scenario
+02/12/2015  14:56    <DIR>          scripts
+02/12/2015  14:56    <DIR>          src
+02/12/2015  14:56    <DIR>          tagTranslation
+02/12/2015  14:56    <DIR>          utterances
+              12 File(s)     36,938,570 bytes
+              14 Dir(s)  214,936,064,000 bytes free
+
+F:\EMOTE-Scenario2\2015-05-29\im-java-s2>pushd ..\Enercities 
+
+F:\EMOTE-Scenario2\2015-05-29\Enercities>start Enercities.exe 
+
+F:\EMOTE-Scenario2\2015-05-29\Enercities>popd
